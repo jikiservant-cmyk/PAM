@@ -90,7 +90,7 @@ export default function ScriptureFinderPage() {
                 {[
                   "What are some verses about hope?",
                   "How do I deal with anxiety?",
-                  "Bible's perspective on loving neighbors",
+                  "Being a mentor like Christ",
                   "Finding purpose in my work"
                 ].map((q, i) => (
                   <button

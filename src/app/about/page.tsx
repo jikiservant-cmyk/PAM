@@ -12,23 +12,46 @@ import { Separator } from "@/components/ui/separator"
 import { ImageReveal } from "@/components/ImageReveal"
 import { PlaceHolderImages } from "@/app/lib/placeholder-images"
 
+const coreValues = [
+  {
+    name: "Christ-centredness",
+    body: "Jesus Christ is at the heart of everything we do: the message we carry, the reason we serve, and the model for how we mentor.",
+    verse: "Colossians 1:18",
+  },
+  {
+    name: "Servanthood",
+    body: "We lead by serving, after the pattern of Christ who came not to be served but to serve. Every papa and mama is trained to serve first.",
+    verse: "Mark 10:45",
+  },
+  {
+    name: "Integrity",
+    body: "We handle what is entrusted to us, people, resources and the gospel, honestly, transparently and accountably.",
+    verse: "Proverbs 11:3",
+  },
+  {
+    name: "Teamwork",
+    body: "Young people, mentors, families and churches work as one body, each part doing its share, none of it done alone.",
+    verse: "1 Corinthians 12:27",
+  },
+];
+
 const team = [
   {
-    name: "Mubiru Florence",
-    role: "Lead Pastor",
-    bio: "Visionary leader dedicated to community spiritual growth.",
+    name: "[Papa name]",
+    role: "Founding Papa",
+    bio: "Visionary leader committed to mentoring the next generation.",
     image: PlaceHolderImages.find(img => img.id === 'pastor-florence')?.imageUrl || "https://picsum.photos/seed/p1/400/500"
   },
   {
-    name: "Kembabazi Rose",
-    role: "Community Director",
-    bio: "Passionate about outreach and local support programs.",
+    name: "[Mama name]",
+    role: "Founding Mama",
+    bio: "Passionate about nurturing young people and strengthening families.",
     image: PlaceHolderImages.find(img => img.id === 'director-rose')?.imageUrl || "/images/IMG_8891.jpg"
   },
   {
-    name: "Sebalamu Geoffrey",
-    role: "Creative Arts",
-    bio: "Crafting modern worship experiences through media and art.",
+    name: "[Papa name]",
+    role: "Mentorship Lead",
+    bio: "Equipping mentors and walking with emerging leaders.",
     image: PlaceHolderImages.find(img => img.id === 'creative-geoffrey')?.imageUrl || "https://picsum.photos/seed/p3/400/500"
   }
 ]
@@ -66,23 +89,61 @@ export default function AboutPage() {
           <div className="max-w-4xl mx-auto text-center space-y-12">
             <BlurFocusText>
               <h2 className="text-[#FFB800] text-3xl md:text-5xl font-black uppercase font-serif tracking-tight">
-                Mission Statement
+                Vision &amp; Mission
               </h2>
             </BlurFocusText>
             
-            <div className="space-y-8">
-              <InkFlowText delay={0.8} className="text-xl md:text-2xl font-body leading-relaxed text-white/90">
-                NCF Church exists to be a beacon of grace in a complex world. We are committed to authentic faith, radical hospitality, and systemic change through the power of love.
-              </InkFlowText>
-              
-              <InkFlowText delay={1.2} className="text-lg text-white/70 font-body leading-relaxed max-w-2xl mx-auto">
-                Founded in 1995, we started as a small gathering in a basement and have grown into a diverse metropolitan family reaching thousands both locally and digitally.
-              </InkFlowText>
+            <div className="space-y-10">
+              <div className="space-y-4">
+                <span className="text-[#FFB800] font-bold uppercase tracking-[0.3em] text-xs block">Our Vision</span>
+                <InkFlowText delay={0.8} className="text-xl md:text-2xl font-body leading-relaxed text-white/90">
+                  Christ-transformed young people and families impacting their homes, campuses, churches and communities.
+                </InkFlowText>
+              </div>
+
+              <div className="space-y-4">
+                <span className="text-[#FFB800] font-bold uppercase tracking-[0.3em] text-xs block">Our Mission</span>
+                <InkFlowText delay={1.2} className="text-lg text-white/70 font-body leading-relaxed max-w-2xl mx-auto">
+                  To walk with young people, families and emerging leaders, connecting them with mature believers who mentor them in faith, character and service.
+                </InkFlowText>
+              </div>
             </div>
             
             <div className="pt-8">
               <div className="h-1 w-20 bg-[#FFB800] mx-auto" />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 2b. Core Values Section */ }
+      <section className="py-24 bg-[#F8F8F8] text-[#2D2B44]">
+        <div className="container mx-auto px-6 md:px-12">
+          <div className="text-center mb-16">
+            <KineticHeadline
+              lines={["OUR CORE VALUES"]}
+              className="text-4xl md:text-5xl font-black uppercase font-headline tracking-tighter text-[#2D2B44] mb-4"
+            />
+            <InkFlowText className="text-muted-foreground max-w-xl mx-auto text-lg font-body leading-relaxed">
+              Four commitments behind every mentoring relationship, retreat and training we run.
+            </InkFlowText>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+            {coreValues.map((value, i) => (
+              <div
+                key={i}
+                className="bg-white p-8 border-t-4 border-[#FFB800] shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col space-y-4 fade-in"
+                style={{ animationDelay: `${i * 0.15}s` }}
+              >
+                <span className="text-[#FFB800] font-serif text-3xl font-black">{String(i + 1).padStart(2, '0')}</span>
+                <h3 className="text-lg font-black font-headline uppercase tracking-tight">{value.name}</h3>
+                <InkFlowText delay={0.6 + i * 0.1} className="text-muted-foreground font-body text-sm leading-relaxed flex-1">
+                  {value.body}
+                </InkFlowText>
+                <span className="text-[#FFB800] font-bold text-xs uppercase tracking-widest pt-2">{value.verse}</span>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -98,13 +159,13 @@ export default function AboutPage() {
               />
               <Separator className="bg-[#2D2B44]/10 w-32 h-[2px]" />
               <InkFlowText className="text-muted-foreground text-lg leading-relaxed font-body">
-                Our history is a series of "yes" moments. Yes to serving our neighbors, yes to embracing new technology, and yes to keeping the door open for everyone, regardless of where they are on their path.
+                Our story is a series of "yes" moments. Yes to mentoring one more young person, yes to strengthening one more home, and yes to keeping the door open for everyone, wherever they are on their journey.
               </InkFlowText>
             </div>
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
               <ImageReveal 
                 src={historyImg} 
-                alt="Church History" 
+                alt="Our Story" 
                 width={800}
                 height={600}
                 className="w-full h-full grayscale hover:grayscale-0 transition-all duration-1000"
@@ -123,7 +184,7 @@ export default function AboutPage() {
               className="text-4xl font-black uppercase font-headline text-[#2D2B44] mb-4"
             />
             <InkFlowText className="text-muted-foreground max-w-xl mx-auto">
-              Guided by a group of dedicated individuals who believe in the power of service and transparency.
+              Guided by papas and mamas who believe in the power of service, integrity and transparency.
             </InkFlowText>
           </div>
 

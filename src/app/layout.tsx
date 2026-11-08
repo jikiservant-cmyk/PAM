@@ -5,8 +5,8 @@ import { Footer } from '@/components/Footer';
 import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
-  title: 'NCF Church | Welcome Home',
-  description: 'A modern community dedicated to faith, hope, and love.',
+  title: 'Papas and Mamas Network | Raising Spiritual Parents',
+  description: 'Papas and Mamas Network (PAM) mentors young people, families and emerging leaders through intentional spiritual parenting.',
 };
 
 export default function RootLayout({

@@ -40,7 +40,7 @@ export default function DonatePage() {
         
         <div className="container mx-auto px-6 relative z-10 text-center">
           <KineticHeadline 
-            lines={["SUPPORT OUR", "MISSION"]} 
+            lines={["GIVE TO", "THE NETWORK"]} 
             className="text-6xl md:text-8xl lg:text-9xl font-black uppercase tracking-tighter leading-[0.85] font-serif text-[#FFB800]"
             staggerDelay={0.2}
           />
@@ -64,27 +64,27 @@ export default function DonatePage() {
 
                   {/* Big Amount Buttons */}
                   <div className="grid grid-cols-3 gap-4">
-                    {["25", "50", "100", "250", "500", "Other"].map((val) => (
+                    {["50000", "100000", "250000", "500000", "1000000", "Other"].map((val) => (
                       <button
                         key={val}
                         onClick={() => val !== 'Other' ? setAmount(val) : setAmount("")}
                         className={`h-20 text-2xl font-black transition-all duration-300 border-2 ${
-                          (amount === val || (val === 'Other' && !["25", "50", "100", "250", "500"].includes(amount)))
+                          (amount === val || (val === 'Other' && !["50000", "100000", "250000", "500000", "1000000"].includes(amount)))
                             ? "bg-[#FFB800] border-[#FFB800] text-[#3E3E4E]" 
                             : "bg-transparent border-white/10 text-white hover:border-[#FFB800] hover:text-[#FFB800]"
                         } font-serif`}
                       >
-                        {val === 'Other' ? '??' : `$${val}`}
+                        {val === 'Other' ? 'Other' : `${Number(val).toLocaleString()}`}
                       </button>
                     ))}
                   </div>
 
                   <div className="space-y-6">
                     <div className="relative group">
-                      <span className="absolute left-6 top-1/2 -translate-y-1/2 text-2xl text-white/40 font-black font-serif">$</span>
+                      <span className="absolute left-6 top-1/2 -translate-y-1/2 text-xl text-white/40 font-black font-serif">UGX</span>
                       <Input
                         type="number"
-                        placeholder="0.00"
+                        placeholder="Amount"
                         className="h-20 bg-white/5 border-2 border-white/10 text-white text-3xl font-black pl-12 focus:border-[#FFB800] transition-colors rounded-none placeholder:text-white/10"
                         value={amount}
                         onChange={(e) => setAmount(e.target.value)}
@@ -107,7 +107,7 @@ export default function DonatePage() {
                         className="w-full h-20 text-2xl font-black bg-[#FFB800] text-[#3E3E4E] hover:bg-[#FFB800]/90 rounded-none shadow-xl group" 
                         onClick={handleDonate}
                       >
-                        GIVE {recurring ? 'MONTHLY' : 'NOW'} — ${amount || '0'}
+                        GIVE {recurring ? 'MONTHLY' : 'NOW'} — UGX {amount ? Number(amount).toLocaleString() : '0'}
                         <ArrowRight className="ml-4 h-8 w-8 group-hover:translate-x-2 transition-transform" />
                       </Button>
                     </MagneticButton>
@@ -131,7 +131,7 @@ export default function DonatePage() {
                   className="text-4xl md:text-6xl font-black uppercase text-[#2D2B44] font-headline"
                 />
                 <InkFlowText className="text-muted-foreground text-xl leading-relaxed font-body max-w-xl">
-                  Every contribution, no matter the size, is a seed planted in our community. We believe in radical transparency and systemic change through collective action.
+                  Every gift, whatever its size, mentors one more young person and strengthens one more home. We are committed to transparency and to stewarding what is entrusted to us.
                 </InkFlowText>
               </div>
 
@@ -141,9 +141,9 @@ export default function DonatePage() {
                     <Users className="h-8 w-8 text-[#FFB800]" />
                   </div>
                   <div className="space-y-2">
-                    <h3 className="text-xl font-bold text-[#2D2B44] uppercase tracking-wide">Community Outreach</h3>
+                    <h3 className="text-xl font-bold text-[#2D2B44] uppercase tracking-wide">Mentorship</h3>
                     <InkFlowText delay={1} className="text-muted-foreground font-body leading-relaxed">
-                      Funding our local food pantry, shelter support, and educational programs for at-risk youth in the city center.
+                      Training and supporting papas and mamas who give their time to walk with young people week after week.
                     </InkFlowText>
                   </div>
                 </div>
@@ -153,9 +153,9 @@ export default function DonatePage() {
                     <PlayCircle className="h-8 w-8 text-[#FFB800]" />
                   </div>
                   <div className="space-y-2">
-                    <h3 className="text-xl font-bold text-[#2D2B44] uppercase tracking-wide">Digital Ministry</h3>
+                    <h3 className="text-xl font-bold text-[#2D2B44] uppercase tracking-wide">Training &amp; Resources</h3>
                     <InkFlowText delay={1.2} className="text-muted-foreground font-body leading-relaxed">
-                      Expanding our reach through high-quality live streaming and digital content to connect with those who cannot attend in person.
+                      Producing discipleship material, mentorship guides and retreats that equip the next generation.
                     </InkFlowText>
                   </div>
                 </div>
@@ -165,9 +165,9 @@ export default function DonatePage() {
                     <Star className="h-8 w-8 text-[#FFB800]" />
                   </div>
                   <div className="space-y-2">
-                    <h3 className="text-xl font-bold text-[#2D2B44] uppercase tracking-wide">Future Growth</h3>
+                    <h3 className="text-xl font-bold text-[#2D2B44] uppercase tracking-wide">Outreach</h3>
                     <InkFlowText delay={1.4} className="text-muted-foreground font-body leading-relaxed">
-                      Contributing to our long-term vision of building a permanent community center for arts and spiritual guidance.
+                      Extending care and support to vulnerable young people and families in the communities we serve.
                     </InkFlowText>
                   </div>
                 </div>
@@ -177,7 +177,7 @@ export default function DonatePage() {
                 <div className="p-8 bg-[#F8F8F8] border-l-4 border-[#FFB800] flex items-center space-x-6">
                   <ShieldCheck className="h-10 w-10 text-[#FFB800] shrink-0" />
                   <p className="text-sm font-bold text-[#2D2B44] uppercase tracking-widest leading-relaxed">
-                    NCF Church is a registered 501(c)(3) nonprofit. All donations are tax-deductible.
+                    Papas and Mamas Network receives gifts by mobile money and bank transfer. Email your reference so we can send a receipt.
                   </p>
                 </div>
               </BlurFocusText>
@@ -191,7 +191,7 @@ export default function DonatePage() {
       <section className="py-32 bg-[#003322] text-white text-center">
         <div className="container mx-auto px-6">
           <KineticHeadline 
-            lines={["THANK YOU FOR BEING", "PART OF THE STORY"]} 
+            lines={["THANK YOU FOR", "STANDING WITH US"]} 
             className="text-4xl md:text-7xl font-black uppercase font-headline mb-16"
           />
           <MagneticButton strength={30}>

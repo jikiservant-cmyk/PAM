@@ -11,51 +11,51 @@ import { cn } from "@/lib/utils";
 
 const events = [
   {
-    day: "03",
-    month: "NOV",
-    title: "Youth Night: Glow in the Dark",
-    location: "Youth Center",
-    time: "6:30 PM",
+    day: "05",
+    month: "DEC",
+    title: "Mentors' Retreat",
+    location: "Training Centre",
+    time: "9:00 AM",
     image: "https://picsum.photos/seed/event-youth/600/800"
   },
   {
-    day: "05",
-    month: "NOV",
-    title: "Community Outreach Lunch",
+    day: "12",
+    month: "DEC",
+    title: "Papas & Mamas Breakfast",
     location: "Main Hall",
-    time: "12:30 PM",
+    time: "8:00 AM",
     image: "https://picsum.photos/seed/event-outreach/600/800"
   },
   {
-    day: "12",
-    month: "NOV",
-    title: "Marriage Seminar Weekend",
-    location: "Sanctuary",
-    time: "7:00 PM",
+    day: "19",
+    month: "DEC",
+    title: "Youth Mentoring Day",
+    location: "Community Hall",
+    time: "10:00 AM",
     image: "https://picsum.photos/seed/event-marriage/600/800"
   },
   {
-    day: "15",
-    month: "NOV",
-    title: "Choir Rehearsal & Christmas",
-    location: "Music Room",
-    time: "7:00 PM",
+    day: "09",
+    month: "JAN",
+    title: "New Mentors' Orientation",
+    location: "Training Room",
+    time: "9:00 AM",
     image: "https://picsum.photos/seed/event-choir/600/800"
   },
   {
-    day: "18",
-    month: "NOV",
-    title: "Women's Coffee Morning",
-    location: "Fellowship Cafe",
-    time: "10:00 AM",
+    day: "16",
+    month: "JAN",
+    title: "Marriage Enrichment Evening",
+    location: "Main Hall",
+    time: "6:00 PM",
     image: "https://picsum.photos/seed/event-women/600/800"
   },
   {
-    day: "26",
-    month: "NOV",
-    title: "Baptism Service",
-    location: "North Garden",
-    time: "2:00 PM",
+    day: "23",
+    month: "JAN",
+    title: "Prayer & Fasting Day",
+    location: "Sanctuary",
+    time: "7:00 AM",
     image: "https://picsum.photos/seed/event-baptism/600/800"
   }
 ];
@@ -89,14 +89,14 @@ export default function EventsPage() {
         <div className="w-full lg:w-2/5 bg-[#003322] flex flex-col justify-center p-12 md:p-20 text-white">
           <div className="space-y-6 slide-up">
             <span className="text-[#FFB800] font-serif text-3xl md:text-5xl font-black tracking-tighter block border-b-2 border-[#FFB800] w-fit pb-2">
-              OCT 24
+              DEC 05
             </span>
             <KineticHeadline 
-              lines={["ANNUAL", "GALA NIGHT"]} 
+              lines={["MENTORS'", "RETREAT"]} 
               className="text-5xl md:text-7xl font-black uppercase font-headline leading-[0.85]"
             />
             <InkFlowText className="text-white/80 text-lg md:text-xl font-body leading-relaxed max-w-md">
-              A night of celebration and vision casting for the upcoming year. Join us for an evening of inspiration and community impact.
+              A day of celebration, vision casting and commissioning for the year ahead. Join papas and mamas from across the network for inspiration and fellowship.
             </InkFlowText>
             <div className="pt-8">
               <MagneticButton>

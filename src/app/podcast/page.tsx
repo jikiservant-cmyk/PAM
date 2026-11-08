@@ -13,32 +13,32 @@ const episodes = [
   {
     number: "04",
     title: "The Architecture of Faith",
-    description: "In this episode, we explore how our daily habits and environments shape our spiritual walk and the 'structures' we build our lives upon.",
-    date: "OCT 15, 2023",
+    description: "How our daily habits and the environments we grow up in shape our walk with God, and the structures we build our lives upon.",
+    date: "OCT 15, 2025",
     duration: "42 MIN",
     image: "https://picsum.photos/seed/pod4/400/400"
   },
   {
     number: "03",
     title: "Grace in the Grey Areas",
-    description: "Navigating complex moral landscapes with compassion and truth. A deep dive into the nuances of modern ethical challenges.",
-    date: "OCT 08, 2023",
+    description: "Navigating complex moral questions with compassion and truth, a conversation on the pressures young people face today.",
+    date: "OCT 08, 2025",
     duration: "38 MIN",
     image: "https://picsum.photos/seed/pod3/400/400"
   },
   {
     number: "02",
     title: "Quietude and the City",
-    description: "Finding moments of profound silence and connection with the divine amidst the relentless noise of metropolitan life.",
-    date: "OCT 01, 2023",
+    description: "Finding silence and connection with God in the middle of Kampala's relentless noise, work and family demands.",
+    date: "OCT 01, 2025",
     duration: "45 MIN",
     image: "https://picsum.photos/seed/pod2/400/400"
   },
   {
     number: "01",
     title: "Beginnings and Anchors",
-    description: "Our pilot episode discussing the fundamental pillars of NCF Church and why we believe in the power of local community.",
-    date: "SEP 24, 2023",
+    description: "Our first episode, on why Papas and Mamas Network exists and why we believe spiritual parenting changes everything.",
+    date: "SEP 24, 2025",
     duration: "50 MIN",
     image: "https://picsum.photos/seed/pod1/400/400"
   }
@@ -86,7 +86,7 @@ export default function PodcastPage() {
             </MagneticButton>
             <div className="space-y-1">
               <p className="font-bold text-xl">Listen Now</p>
-              <p className="text-white/60 font-body">48 Minutes • Oct 22, 2023</p>
+              <p className="text-white/60 font-body">48 Minutes • Oct 22, 2025</p>
             </div>
           </div>
         </div>
@@ -97,7 +97,7 @@ export default function PodcastPage() {
         <div className="container mx-auto px-6 md:px-12 max-w-6xl">
           <div className="mb-16">
             <KineticHeadline 
-              lines={["EPISODE", "ARCHIVE"]} 
+              lines={["MEDIA", "LIBRARY"]} 
               className="text-white text-4xl md:text-6xl font-black font-headline mb-4"
             />
             <div className="h-1 w-24 bg-[#FFB800]" />

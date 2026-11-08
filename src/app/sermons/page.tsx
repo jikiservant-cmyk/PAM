@@ -10,56 +10,56 @@ import { cn } from "@/lib/utils"
 
 const ministries = [
   {
-    title: "YOUTH MINISTRY",
-    description: "Empowering the next generation to lead with faith and purpose. Our youth programs provide a safe space for exploration, growth, and authentic community building.",
+    title: "LEADERSHIP DEVELOPMENT",
+    description: "Jesus came not to be served but to serve. We train young leaders in servant leadership so they grow into men and women of integrity in their homes, churches and communities.",
     image: "https://picsum.photos/seed/youth-min/800/800",
     bgColor: "bg-[#3E3E4E]",
     textColor: "text-white",
     btnClass: "bg-[#FFB800] text-[#3E3E4E] hover:bg-[#FFB800]/90"
   },
   {
-    title: "COMMUNITY OUTREACH",
-    description: "Extending a helping hand to our neighbors. Through local partnerships and grassroots initiatives, we aim to address systemic needs and share radical hospitality.",
+    title: "DISCIPLESHIP & MENTORING",
+    description: "Young people need someone who will walk with them. Our papas and mamas give time, wisdom and prayer, helping the next generation grow into mature, Christ-centred believers.",
     image: "https://picsum.photos/seed/outreach-min/800/800",
     bgColor: "bg-[#003322]",
     textColor: "text-white",
     btnClass: "border-[#FFB800] text-[#FFB800] hover:bg-[#FFB800] hover:text-[#003322]"
   },
   {
-    title: "WOMEN'S MINISTRY",
-    description: "A community of women growing together in grace, wisdom, and love. Our gatherings focus on spiritual nourishment, deep connection, and supporting one another in every season of life.",
+    title: "EVANGELISM & MISSIONS",
+    description: "We support young believers to share the gospel with friends, campuses and neighbourhoods, and to carry the good news of Jesus Christ beyond borders.",
     image: "https://picsum.photos/seed/women-min/800/800",
     bgColor: "bg-[#3E3E4E]",
     textColor: "text-white",
     btnClass: "bg-[#FFB800] text-[#3E3E4E] hover:bg-[#FFB800]/90"
   },
   {
-    title: "MEN'S MINISTRY",
-    description: "Building strong men of faith through brotherhood, discipleship, and service. We challenge each other to live with integrity and lead our families and communities with purpose.",
+    title: "MARRIAGE & FAMILY",
+    description: "Strong homes raise strong children. We walk with couples and parents through teaching, mentoring and honest conversation about faith in the home.",
     image: "https://picsum.photos/seed/men-min/800/800",
     bgColor: "bg-[#003322]",
     textColor: "text-white",
     btnClass: "border-[#FFB800] text-[#FFB800] hover:bg-[#FFB800] hover:text-[#003322]"
   },
   {
-    title: "KIDS MINISTRY",
-    description: "Nurturing the faith of our youngest members in a fun, safe, and engaging environment. We provide age-appropriate biblical teaching that helps children discover God's love.",
+    title: "YOUTH & STUDENTS",
+    description: "From secondary school to university, we walk with young people through the pressures of study, career and identity, helping them discover God's purpose for their lives.",
     image: "https://picsum.photos/seed/kids-min/800/800",
     bgColor: "bg-[#3E3E4E]",
     textColor: "text-white",
     btnClass: "bg-[#FFB800] text-[#3E3E4E] hover:bg-[#FFB800]/90"
   },
   {
-    title: "WORSHIP & ARTS",
-    description: "Expressing our faith through creative excellence. Our worship experience blends tradition with modern artistry to create an atmosphere of reverence and inspiration.",
+    title: "COMMUNITY & SOCIAL CONCERN",
+    description: "Practical love that neighbours can see. We engage positively with the needs around us, from literacy and life skills to care and support for the vulnerable.",
     image: "https://picsum.photos/seed/worship-min/800/800",
     bgColor: "bg-[#003322]",
     textColor: "text-white",
     btnClass: "border-[#FFB800] text-[#FFB800] hover:bg-[#FFB800] hover:text-[#003322]"
   },
   {
-    title: "GLOBAL MISSIONS",
-    description: "Taking the message of hope beyond borders. We support international projects focused on education, sustainable development, and spiritual guidance across the globe.",
+    title: "PRAYER & PASTORAL CARE",
+    description: "Every mentee needs someone in their corner. Our prayer and pastoral care team stands with young people and families through every season of life.",
     image: "https://picsum.photos/seed/missions-min/800/800",
     bgColor: "bg-[#3E3E4E]",
     textColor: "text-white",
@@ -84,7 +84,7 @@ export default function MinistriesPage() {
         <div className="container mx-auto px-6 relative z-10 flex justify-center text-center">
           <div className="flex flex-col items-center">
             <KineticHeadline 
-              lines={["OUR", "MINISTRIES"]} 
+              lines={["OUR", "PROGRAMS"]} 
               className="text-7xl md:text-[10rem] font-black uppercase tracking-tighter leading-[0.85] font-headline text-[#FFB800]"
               staggerDelay={0.2}
             />
@@ -140,12 +140,12 @@ export default function MinistriesPage() {
       <section className="py-32 bg-[#003322] text-white text-center">
         <div className="container mx-auto px-6">
           <KineticHeadline 
-            lines={["GET INVOLVED TODAY"]} 
+            lines={["BECOME A MENTOR"]} 
             className="text-4xl md:text-7xl font-black uppercase font-headline mb-12"
           />
           <MagneticButton>
             <Button variant="outline" className="border-[#FFB800] text-[#FFB800] hover:bg-[#FFB800] hover:text-[#003322] font-black h-20 px-12 rounded-full text-2xl group transition-all duration-500">
-              JOIN A TEAM <ArrowRight className="ml-2 h-8 w-8 group-hover:translate-x-2 transition-transform" />
+              JOIN THE NETWORK <ArrowRight className="ml-2 h-8 w-8 group-hover:translate-x-2 transition-transform" />
             </Button>
           </MagneticButton>
         </div>

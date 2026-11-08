@@ -44,7 +44,7 @@ export default function ContactPage() {
         
         <div className="container mx-auto px-6 relative z-10 text-center">
           <KineticHeadline 
-            lines={["PLAN YOUR", "VISIT"]} 
+            lines={["GET IN", "TOUCH"]} 
             className="text-6xl md:text-8xl font-black uppercase tracking-tighter leading-[0.85] font-serif text-[#FFB800]"
             staggerDelay={0.2}
           />
@@ -56,12 +56,12 @@ export default function ContactPage() {
         <div className="container mx-auto px-6 md:px-12 max-w-6xl">
           <div className="text-center mb-20 space-y-6">
             <KineticHeadline 
-              lines={["WE'RE HERE FOR YOU"]} 
+              lines={["WE'D LOVE TO HEAR FROM YOU"]} 
               className="text-4xl md:text-5xl font-black text-[#2D2B44] uppercase font-headline"
             />
             <InkFlowText className="text-muted-foreground text-xl font-body max-w-2xl mx-auto leading-relaxed">
-              Have a question about our services, or need someone to stand with you in prayer? 
-              Reach out and let us know how we can support you.
+              Want to join the network, find a mentor, or invite us to your campus, church or community?
+              Reach out and let us know how we can walk with you.
             </InkFlowText>
           </div>
 
@@ -77,7 +77,7 @@ export default function ContactPage() {
                   </div>
                   <div className="space-y-1">
                     <h3 className="text-lg font-bold text-[#2D2B44] uppercase tracking-wide">Location</h3>
-                    <p className="text-muted-foreground font-body">Nabweru Christian Fellowship Church, 9GGV+56F, Nabweru Rd, Kampala</p>
+                    <p className="text-muted-foreground font-body">Papas and Mamas Network, Kampala, Uganda</p>
                   </div>
                 </div>
 
@@ -87,7 +87,7 @@ export default function ContactPage() {
                   </div>
                   <div className="space-y-1">
                     <h3 className="text-lg font-bold text-[#2D2B44] uppercase tracking-wide">Phone</h3>
-                    <p className="text-muted-foreground font-body">(555) 123-4567</p>
+                    <p className="text-muted-foreground font-body">+256 7XX XXX XXX</p>
                   </div>
                 </div>
 
@@ -97,7 +97,7 @@ export default function ContactPage() {
                   </div>
                   <div className="space-y-1">
                     <h3 className="text-lg font-bold text-[#2D2B44] uppercase tracking-wide">Email</h3>
-                    <p className="text-muted-foreground font-body">hello@ncfchurch.org</p>
+                    <p className="text-muted-foreground font-body">hello@papasandmamas.org</p>
                   </div>
                 </div>
               </div>
@@ -106,8 +106,8 @@ export default function ContactPage() {
                 <Heart className="h-10 w-10 text-[#FFB800]" />
                 <h3 className="text-2xl font-black uppercase font-headline">Prayer Support</h3>
                 <InkFlowText delay={1} className="text-white/70 font-body leading-relaxed text-sm">
-                  Our dedicated prayer team meets weekly to lift up your requests. 
-                  Every message is handled with the utmost care and confidentiality.
+                  Our prayer team meets weekly to lift up every request we receive.
+                  Each message is handled with care and confidentiality.
                 </InkFlowText>
               </div>
             </div>
@@ -176,8 +176,8 @@ export default function ContactPage() {
         />
         <div className="absolute inset-0 bg-[#003322]/40 group-hover:bg-transparent transition-all duration-1000 flex items-center justify-center">
           <div className="bg-white p-8 shadow-2xl space-y-2 text-center">
-            <h3 className="text-xl font-black uppercase font-headline">Visit Our Sanctuary</h3>
-            <p className="text-muted-foreground text-sm font-body">Open for quiet prayer Mon-Fri, 9am - 4pm</p>
+            <h3 className="text-xl font-black uppercase font-headline">Visit Our Office</h3>
+            <p className="text-muted-foreground text-sm font-body">Open Mon - Fri, 9am - 5pm</p>
           </div>
         </div>
       </section>

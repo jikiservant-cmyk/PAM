@@ -8,11 +8,11 @@ import { cn } from "@/lib/utils"
 
 const navLinks = [
   { name: "About Us", href: "/about" },
+  { name: "Programs", href: "/sermons" },
   { name: "Events", href: "/events" },
-  { name: "Our Ministries", href: "/sermons" },
-  { name: "Podcast", href: "/podcast" },
-  { name: "Donate", href: "/donate" },
-  { name: "Visit Us", href: "/contact" },
+  { name: "Media", href: "/podcast" },
+  { name: "Give", href: "/donate" },
+  { name: "Contact", href: "/contact" },
 ]
 
 export function Navbar() {
@@ -21,6 +21,21 @@ export function Navbar() {
 
   return (
     <header className="w-full z-50 sticky top-0 bg-[#3E3E4E] shadow-lg">
+      {/* Utility bar */}
+      <div className="hidden md:block border-b border-white/10 bg-[#2D2B44]">
+        <div className="container mx-auto px-6 lg:px-12">
+          <div className="flex h-10 items-center justify-between text-[11px] uppercase tracking-[0.15em] text-white/50 whitespace-nowrap">
+            <div className="flex items-center space-x-8">
+              <span>Kampala, Uganda</span>
+              <span className="hidden lg:inline">+256 7XX XXX XXX</span>
+            </div>
+            <div className="flex items-center space-x-8">
+              <Link href="/scripture-finder" className="hover:text-white/80 transition-colors">Bible Guides</Link>
+              <Link href="/donate" className="hover:text-white/80 transition-colors">Give</Link>
+            </div>
+          </div>
+        </div>
+      </div>
       <nav className="container mx-auto px-6 lg:px-12">
         <div className="flex h-20 items-center justify-between">
           {/* Logo & Links Group */}
