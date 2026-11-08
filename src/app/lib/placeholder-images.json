@@ -1,0 +1,59 @@
+
+{
+  "placeholderImages": [
+    {
+      "id": "hero-church",
+      "description": "Our Vision - Building a better tomorrow",
+      "imageUrl": "/images/IMG_8930.JPG",
+      "imageHint": "church vision"
+    },
+    {
+      "id": "live-stream",
+      "description": "Live sermon streaming view",
+      "imageUrl": "https://picsum.photos/seed/sermon1/1280/720",
+      "imageHint": "church sermon"
+    },
+    {
+      "id": "worship-band",
+      "description": "Church worship band performing",
+      "imageUrl": "https://picsum.photos/seed/worship1/800/600",
+      "imageHint": "worship band"
+    },
+    {
+      "id": "community-gathering",
+      "description": "People gathered in a church community hall",
+      "imageUrl": "https://picsum.photos/seed/community1/800/600",
+      "imageHint": "church community"
+    },
+    {
+      "id": "scripture-study",
+      "description": "Open Bible on a wooden table",
+      "imageUrl": "https://picsum.photos/seed/bible1/800/600",
+      "imageHint": "open bible"
+    },
+    {
+      "id": "pastor-florence",
+      "description": "Mubiru Florence - Lead Pastor",
+      "imageUrl": "https://picsum.photos/seed/p1/400/500",
+      "imageHint": "pastor woman"
+    },
+    {
+      "id": "director-rose",
+      "description": "Kembabazi Rose - Community Director",
+      "imageUrl": "/images/IMG_8891.jpg",
+      "imageHint": "woman leader"
+    },
+    {
+      "id": "creative-geoffrey",
+      "description": "Sebalamu Geoffrey - Creative Arts",
+      "imageUrl": "https://picsum.photos/seed/p3/400/500",
+      "imageHint": "man creative"
+    },
+    {
+      "id": "about-history",
+      "description": "Church History - Journey so far",
+      "imageUrl": "/images/IMG_8919.jpg",
+      "imageHint": "church history"
+    }
+  ]
+}
