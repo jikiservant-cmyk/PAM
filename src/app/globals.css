@@ -53,6 +53,13 @@
   font-family: var(--font-serif);
 }
 
+/* Editorial hero face — light transitional serif, matching the reference */
+.font-hero {
+  font-family: 'Playfair Display', 'Times New Roman', serif;
+  font-weight: 400;
+  font-feature-settings: 'liga' 1, 'kern' 1;
+}
+
 .font-body {
   font-family: var(--font-body);
 }

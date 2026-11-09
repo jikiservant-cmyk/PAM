@@ -24,25 +24,31 @@ export default function Home() {
               backgroundImage: `url(${heroImg?.imageUrl || "/hero/IMG_8911.jpg"})`,
             }}
           />
-          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 bg-black/65" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.35)_0%,rgba(0,0,0,0.75)_100%)]" />
         </div>
         
         <div className="container mx-auto px-6 relative z-10 flex justify-center">
           <div className="flex flex-col items-center text-white">
-            <KineticHeadline 
-              lines={["WELCOME TO"]} 
-              className="text-lg md:text-2xl font-bold uppercase tracking-[0.4em] mb-12 font-headline text-center"
+            {/* gold rule above */}
+            <div className="w-px h-16 md:h-24 bg-[#FFB800]/70 mb-10" />
+
+            <KineticHeadline
+              lines={["WE EXIST TO RAISE UP SPIRITUAL PARENTS WHO"]}
+              className="text-[10px] md:text-xs font-normal uppercase tracking-[0.42em] mb-8 font-headline text-center text-white/85"
               staggerDelay={0}
             />
-            
-            <KineticHeadline 
-              lines={["PAPAS", "& MAMAS"]} 
-              className="text-7xl md:text-[12rem] font-[900] uppercase tracking-tighter leading-[0.75] font-headline text-left items-start"
-              staggerDelay={0.1}
+
+            <KineticHeadline
+              lines={["Raise a Generation", "Rooted in Christ"]}
+              className="text-5xl md:text-7xl lg:text-[7.5rem] font-normal tracking-[-0.02em] leading-[1.05] font-hero text-center"
+              staggerDelay={0.12}
             />
-            
-            <div className="w-24 h-3 bg-white mt-12 mb-8" />
-            <ChevronDown className="h-10 w-10 animate-bounce opacity-60" strokeWidth={1.5} />
+
+            {/* gold rule below */}
+            <div className="w-px h-16 md:h-24 bg-[#FFB800]/70 mt-10 mb-8" />
+
+            <ChevronDown className="h-8 w-8 animate-bounce opacity-50" strokeWidth={1.25} />
           </div>
         </div>
       </section>
