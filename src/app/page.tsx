@@ -8,50 +8,17 @@ import { ImageReveal } from "@/components/ImageReveal"
 import { KineticHeadline } from "@/components/KineticHeadline"
 import { MagneticButton } from "@/components/MagneticButton"
 import { InkFlowText } from "@/components/InkFlowText"
+import { RotatingHero } from "@/components/RotatingHero"
+import { StatsSection } from "@/components/StatsSection"
+import { heroSlides } from "@/app/lib/hero-slides"
 
 export default function Home() {
-  const heroImg = { imageUrl: "/hero/IMG_8911.jpg" }
   const visionImg = { imageUrl: "/hero/IMG_8930.JPG" }
 
   return (
     <div className="flex flex-col w-full relative">
-      {/* Hero Section with Mobile-Compatible Parallax */}
-      <section className="relative h-screen w-full overflow-hidden flex items-center justify-center bg-[#04301F]">
-        <div className="absolute inset-0 overflow-hidden pointer-events-none" style={{ clipPath: 'inset(0)' }}>
-          <div 
-            className="fixed inset-0 w-full h-full bg-center bg-cover -z-10"
-            style={{
-              backgroundImage: `url(${heroImg?.imageUrl || "/hero/IMG_8911.jpg"})`,
-            }}
-          />
-          <div className="absolute inset-0 bg-black/65" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.35)_0%,rgba(0,0,0,0.75)_100%)]" />
-        </div>
-        
-        <div className="container mx-auto px-6 relative z-10 flex justify-center">
-          <div className="flex flex-col items-center text-white">
-            {/* gold rule above */}
-            <div className="w-px h-16 md:h-24 bg-[#FFB800]/70 mb-10" />
-
-            <KineticHeadline
-              lines={["WE EXIST TO RAISE UP SPIRITUAL PARENTS WHO"]}
-              className="text-[10px] md:text-xs font-normal uppercase tracking-[0.42em] mb-8 font-headline text-center text-white/85"
-              staggerDelay={0}
-            />
-
-            <KineticHeadline
-              lines={["Raise a Generation", "Rooted in Christ"]}
-              className="text-5xl md:text-7xl lg:text-[7.5rem] font-normal tracking-[-0.02em] leading-[1.05] font-hero text-center"
-              staggerDelay={0.12}
-            />
-
-            {/* gold rule below */}
-            <div className="w-px h-16 md:h-24 bg-[#FFB800]/70 mt-10 mb-8" />
-
-            <ChevronDown className="h-8 w-8 animate-bounce opacity-50" strokeWidth={1.25} />
-          </div>
-        </div>
-      </section>
+      {/* Rotating Hero */}
+      <RotatingHero slides={heroSlides} interval={6500} blackoutDuration={900} />
 
       {/* Floating Chat Button */}
       <div className="fixed bottom-8 right-8 z-50">
@@ -83,6 +50,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <StatsSection />
 
       {/* Image Reveal Section with Kinetic Headline */}
       <section className="py-12 md:py-24 bg-[#3E3E4E] overflow-hidden">

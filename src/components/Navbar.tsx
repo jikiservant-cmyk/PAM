@@ -13,6 +13,7 @@ const navLinks = [
   { name: "Media", href: "/podcast" },
   { name: "Give", href: "/donate" },
   { name: "Contact", href: "/contact" },
+  { name: "Fellowships", href: "/fellowship" },
 ]
 
 export function Navbar() {
