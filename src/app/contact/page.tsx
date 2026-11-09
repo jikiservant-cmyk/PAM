@@ -37,7 +37,7 @@ export default function ContactPage() {
           <div 
             className="fixed inset-0 w-full h-full bg-center bg-cover -z-10 grayscale brightness-[0.3]"
             style={{
-              backgroundImage: `url(https://picsum.photos/seed/contact-hero/1920/1080)`,
+              backgroundImage: `url(/hero/IMG_8179.jpg)`,
             }}
           />
         </div>
@@ -172,7 +172,7 @@ export default function ContactPage() {
       <section className="h-[50vh] w-full bg-[#F5F5F5] relative group overflow-hidden">
         <div 
           className="absolute inset-0 grayscale brightness-90 group-hover:grayscale-0 transition-all duration-1000 bg-center bg-cover"
-          style={{ backgroundImage: `url(https://picsum.photos/seed/church-map/1920/1080)` }}
+          style={{ backgroundImage: `url(/hero/IMG_8930.JPG)` }}
         />
         <div className="absolute inset-0 bg-[#003322]/40 group-hover:bg-transparent transition-all duration-1000 flex items-center justify-center">
           <div className="bg-white p-8 shadow-2xl space-y-2 text-center">

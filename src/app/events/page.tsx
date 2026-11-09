@@ -16,7 +16,7 @@ const events = [
     title: "Mentors' Retreat",
     location: "Training Centre",
     time: "9:00 AM",
-    image: "https://picsum.photos/seed/event-youth/600/800"
+    image: "/card/pam-youth.jpg"
   },
   {
     day: "12",
@@ -24,7 +24,7 @@ const events = [
     title: "Papas & Mamas Breakfast",
     location: "Main Hall",
     time: "8:00 AM",
-    image: "https://picsum.photos/seed/event-outreach/600/800"
+    image: "/card/pam-family.jpg"
   },
   {
     day: "19",
@@ -32,7 +32,7 @@ const events = [
     title: "Youth Mentoring Day",
     location: "Community Hall",
     time: "10:00 AM",
-    image: "https://picsum.photos/seed/event-marriage/600/800"
+    image: "/card/pam-family.jpg"
   },
   {
     day: "09",
@@ -40,7 +40,7 @@ const events = [
     title: "New Mentors' Orientation",
     location: "Training Room",
     time: "9:00 AM",
-    image: "https://picsum.photos/seed/event-choir/600/800"
+    image: "/card/IMG_8950.jpg"
   },
   {
     day: "16",
@@ -48,7 +48,7 @@ const events = [
     title: "Marriage Enrichment Evening",
     location: "Main Hall",
     time: "6:00 PM",
-    image: "https://picsum.photos/seed/event-women/600/800"
+    image: "/card/pam-mamas.jpg"
   },
   {
     day: "23",
@@ -56,7 +56,7 @@ const events = [
     title: "Prayer & Fasting Day",
     location: "Sanctuary",
     time: "7:00 AM",
-    image: "https://picsum.photos/seed/event-baptism/600/800"
+    image: "/card/_MG_9274.jpg"
   }
 ];
 
@@ -68,7 +68,7 @@ export default function EventsPage() {
         <div 
           className="fixed inset-0 w-full h-full bg-center bg-cover grayscale-[0.5] brightness-[0.3]"
           style={{
-            backgroundImage: `url(https://picsum.photos/seed/forest-road/1920/1080)`,
+            backgroundImage: `url(/hero/IMG_8919.jpg)`,
           }}
         />
       </div>
@@ -78,7 +78,7 @@ export default function EventsPage() {
         {/* Left: Moody Photo with subtle zoom */}
         <div className="w-full lg:w-3/5 relative min-h-[400px] lg:min-h-full overflow-hidden group">
           <ImageReveal 
-            src="https://picsum.photos/seed/featured-event/1200/800" 
+            src="/card/pam-mentoring.jpg" 
             alt="Featured Event" 
             className="w-full h-full grayscale brightness-75 transition-transform duration-[10000ms] group-hover:scale-110"
           />
@@ -110,11 +110,11 @@ export default function EventsPage() {
       </section>
 
       {/* 2. Grid Header */}
-      <section className="relative z-10 py-24 bg-white/5 backdrop-blur-sm">
+      <section className="relative z-10 py-24 bg-[#F5F5F5]">
         <div className="container mx-auto px-6 md:px-12 text-center">
           <KineticHeadline 
             lines={["UPCOMING", "GATHERINGS"]} 
-            className="text-white text-5xl md:text-8xl font-black uppercase tracking-tighter font-headline mb-6"
+            className="text-[#2D2B44] text-5xl md:text-8xl font-black uppercase tracking-tighter font-headline mb-6"
           />
           <div className="h-1 w-24 bg-[#FFB800] mx-auto" />
         </div>

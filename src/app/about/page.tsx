@@ -10,7 +10,6 @@ import { MagneticButton } from "@/components/MagneticButton"
 import { BlurFocusText } from "@/components/BlurFocusText"
 import { Separator } from "@/components/ui/separator"
 import { ImageReveal } from "@/components/ImageReveal"
-import { PlaceHolderImages } from "@/app/lib/placeholder-images"
 
 const coreValues = [
   {
@@ -40,34 +39,34 @@ const team = [
     name: "[Papa name]",
     role: "Founding Papa",
     bio: "Visionary leader committed to mentoring the next generation.",
-    image: PlaceHolderImages.find(img => img.id === 'pastor-florence')?.imageUrl || "https://picsum.photos/seed/p1/400/500"
+    image: "/portrait/leader-1.jpg"
   },
   {
     name: "[Mama name]",
     role: "Founding Mama",
     bio: "Passionate about nurturing young people and strengthening families.",
-    image: PlaceHolderImages.find(img => img.id === 'director-rose')?.imageUrl || "/images/IMG_8891.jpg"
+    image: "/portrait/leader-2.jpg"
   },
   {
     name: "[Papa name]",
     role: "Mentorship Lead",
     bio: "Equipping mentors and walking with emerging leaders.",
-    image: PlaceHolderImages.find(img => img.id === 'creative-geoffrey')?.imageUrl || "https://picsum.photos/seed/p3/400/500"
+    image: "/portrait/papa.jpg"
   }
 ]
 
 export default function AboutPage() {
-  const historyImg = PlaceHolderImages.find(img => img.id === 'about-history')?.imageUrl || "/images/IMG_8919.jpg";
+  const historyImg = "/hero/IMG_8919.jpg";
 
   return (
     <div className="flex flex-col w-full">
       {/* 1. Hero Section (Parallax) */}
-      <section className="relative h-screen w-full overflow-hidden flex items-center justify-center bg-[#1A1A1A]">
+      <section className="relative h-screen w-full overflow-hidden flex items-center justify-center bg-[#04301F]">
         <div className="absolute inset-0 overflow-hidden pointer-events-none" style={{ clipPath: 'inset(0)' }}>
           <div 
             className="fixed inset-0 w-full h-full bg-center bg-cover -z-10 grayscale-[0.3] brightness-[0.4]"
             style={{
-              backgroundImage: `url(https://picsum.photos/seed/forest-road/1920/1080)`,
+              backgroundImage: `url(/hero/IMG_8911.jpg)`,
             }}
           />
         </div>

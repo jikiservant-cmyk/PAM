@@ -12,7 +12,7 @@ const ministries = [
   {
     title: "LEADERSHIP DEVELOPMENT",
     description: "Jesus came not to be served but to serve. We train young leaders in servant leadership so they grow into men and women of integrity in their homes, churches and communities.",
-    image: "https://picsum.photos/seed/youth-min/800/800",
+    image: "/card/pam-youth.jpg",
     bgColor: "bg-[#3E3E4E]",
     textColor: "text-white",
     btnClass: "bg-[#FFB800] text-[#3E3E4E] hover:bg-[#FFB800]/90"
@@ -20,7 +20,7 @@ const ministries = [
   {
     title: "DISCIPLESHIP & MENTORING",
     description: "Young people need someone who will walk with them. Our papas and mamas give time, wisdom and prayer, helping the next generation grow into mature, Christ-centred believers.",
-    image: "https://picsum.photos/seed/outreach-min/800/800",
+    image: "/card/pam-family.jpg",
     bgColor: "bg-[#003322]",
     textColor: "text-white",
     btnClass: "border-[#FFB800] text-[#FFB800] hover:bg-[#FFB800] hover:text-[#003322]"
@@ -28,7 +28,7 @@ const ministries = [
   {
     title: "EVANGELISM & MISSIONS",
     description: "We support young believers to share the gospel with friends, campuses and neighbourhoods, and to carry the good news of Jesus Christ beyond borders.",
-    image: "https://picsum.photos/seed/women-min/800/800",
+    image: "/card/pam-mamas.jpg",
     bgColor: "bg-[#3E3E4E]",
     textColor: "text-white",
     btnClass: "bg-[#FFB800] text-[#3E3E4E] hover:bg-[#FFB800]/90"
@@ -36,7 +36,7 @@ const ministries = [
   {
     title: "MARRIAGE & FAMILY",
     description: "Strong homes raise strong children. We walk with couples and parents through teaching, mentoring and honest conversation about faith in the home.",
-    image: "https://picsum.photos/seed/men-min/800/800",
+    image: "/card/pam-mentoring.jpg",
     bgColor: "bg-[#003322]",
     textColor: "text-white",
     btnClass: "border-[#FFB800] text-[#FFB800] hover:bg-[#FFB800] hover:text-[#003322]"
@@ -44,7 +44,7 @@ const ministries = [
   {
     title: "YOUTH & STUDENTS",
     description: "From secondary school to university, we walk with young people through the pressures of study, career and identity, helping them discover God's purpose for their lives.",
-    image: "https://picsum.photos/seed/kids-min/800/800",
+    image: "/card/pam-family.jpg",
     bgColor: "bg-[#3E3E4E]",
     textColor: "text-white",
     btnClass: "bg-[#FFB800] text-[#3E3E4E] hover:bg-[#FFB800]/90"
@@ -52,7 +52,7 @@ const ministries = [
   {
     title: "COMMUNITY & SOCIAL CONCERN",
     description: "Practical love that neighbours can see. We engage positively with the needs around us, from literacy and life skills to care and support for the vulnerable.",
-    image: "https://picsum.photos/seed/worship-min/800/800",
+    image: "/card/IMG_8950.jpg",
     bgColor: "bg-[#003322]",
     textColor: "text-white",
     btnClass: "border-[#FFB800] text-[#FFB800] hover:bg-[#FFB800] hover:text-[#003322]"
@@ -60,7 +60,7 @@ const ministries = [
   {
     title: "PRAYER & PASTORAL CARE",
     description: "Every mentee needs someone in their corner. Our prayer and pastoral care team stands with young people and families through every season of life.",
-    image: "https://picsum.photos/seed/missions-min/800/800",
+    image: "/card/IMG_8888.jpg",
     bgColor: "bg-[#3E3E4E]",
     textColor: "text-white",
     btnClass: "bg-[#FFB800] text-[#3E3E4E] hover:bg-[#FFB800]/90"
@@ -71,12 +71,12 @@ export default function MinistriesPage() {
   return (
     <div className="flex flex-col w-full">
       {/* 1. Hero Section (Parallax) */}
-      <section className="relative h-screen w-full overflow-hidden flex items-center justify-center bg-[#1A1A1A]">
+      <section className="relative h-screen w-full overflow-hidden flex items-center justify-center bg-[#04301F]">
         <div className="absolute inset-0 overflow-hidden pointer-events-none" style={{ clipPath: 'inset(0)' }}>
           <div 
             className="fixed inset-0 w-full h-full bg-center bg-cover -z-10 grayscale brightness-[0.4]"
             style={{
-              backgroundImage: `url(https://picsum.photos/seed/gathering-hero/1920/1080)`,
+              backgroundImage: `url(/hero/IMG_8911.jpg)`,
             }}
           />
         </div>

@@ -33,7 +33,7 @@ export default function DonatePage() {
           <div 
             className="fixed inset-0 w-full h-full bg-center bg-cover -z-10 grayscale brightness-[0.3]"
             style={{
-              backgroundImage: `url(https://picsum.photos/seed/donate-hero/1920/1080)`,
+              backgroundImage: `url(/hero/IMG_8930.JPG)`,
             }}
           />
         </div>

@@ -9,6 +9,10 @@ import { InkFlowText } from "@/components/InkFlowText";
 import { BlurFocusText } from "@/components/BlurFocusText";
 import { ImageReveal } from "@/components/ImageReveal";
 
+// Deterministic bar-animation timings. Random values here caused a
+// server/client hydration mismatch (they differ on every render).
+const DURATIONS = [1.4, 1.9, 1.2, 1.7, 1.5, 1.8, 1.3, 1.6, 1.1, 1.9];
+
 const episodes = [
   {
     number: "04",
@@ -16,7 +20,7 @@ const episodes = [
     description: "How our daily habits and the environments we grow up in shape our walk with God, and the structures we build our lives upon.",
     date: "OCT 15, 2025",
     duration: "42 MIN",
-    image: "https://picsum.photos/seed/pod4/400/400"
+    image: "/card/pam-youth.jpg"
   },
   {
     number: "03",
@@ -24,7 +28,7 @@ const episodes = [
     description: "Navigating complex moral questions with compassion and truth, a conversation on the pressures young people face today.",
     date: "OCT 08, 2025",
     duration: "38 MIN",
-    image: "https://picsum.photos/seed/pod3/400/400"
+    image: "/card/pam-mamas.jpg"
   },
   {
     number: "02",
@@ -32,7 +36,7 @@ const episodes = [
     description: "Finding silence and connection with God in the middle of Kampala's relentless noise, work and family demands.",
     date: "OCT 01, 2025",
     duration: "45 MIN",
-    image: "https://picsum.photos/seed/pod2/400/400"
+    image: "/card/IMG_8888.jpg"
   },
   {
     number: "01",
@@ -40,7 +44,7 @@ const episodes = [
     description: "Our first episode, on why Papas and Mamas Network exists and why we believe spiritual parenting changes everything.",
     date: "SEP 24, 2025",
     duration: "50 MIN",
-    image: "https://picsum.photos/seed/pod1/400/400"
+    image: "/card/pam-mentoring.jpg"
   }
 ];
 
@@ -54,7 +58,7 @@ export default function PodcastPage() {
           <BlurFocusText className="relative aspect-square w-full max-w-md">
              <div className="absolute inset-0 bg-[#FFB800]/20 blur-3xl rounded-full scale-110 opacity-30 animate-pulse" />
              <ImageReveal 
-              src="https://picsum.photos/seed/featured-pod/800/800" 
+              src="/card/pam-mamas.jpg" 
               alt="Latest Episode Cover" 
               className="w-full h-full shadow-2xl rounded-sm"
             />
@@ -75,7 +79,7 @@ export default function PodcastPage() {
           
           <KineticHeadline 
             lines={["RHYTHMS OF", "RESTORATION"]} 
-            className="text-5xl md:text-7xl lg:text-8xl font-black uppercase font-headline leading-[0.85] mb-12"
+            className="text-4xl md:text-5xl lg:text-6xl font-black uppercase font-headline leading-[0.9] mb-12"
           />
 
           <div className="flex items-center space-x-8">
@@ -157,7 +161,7 @@ export default function PodcastPage() {
           {/* Track Info */}
           <div className="flex items-center space-x-4 max-w-[200px] md:max-w-md overflow-hidden">
             <div className="hidden md:block w-12 h-12 bg-[#FFB800]/20 rounded overflow-hidden">
-              <img src="https://picsum.photos/seed/playing/100/100" alt="Now Playing" className="w-full h-full object-cover" />
+              <img src="/card/IMG_8950.jpg" alt="Now Playing" className="w-full h-full object-cover" />
             </div>
             <div className="flex flex-col">
               <span className="text-white font-bold text-sm truncate uppercase tracking-wider">Rhythms of Restoration</span>
@@ -191,7 +195,7 @@ export default function PodcastPage() {
                 className="w-1 bg-white opacity-20"
                 style={{ 
                   height: `${h * 100}%`,
-                  animation: `visualizerPulse ${1 + Math.random()}s infinite ease-in-out` 
+                  animation: `visualizerPulse ${DURATIONS[i % DURATIONS.length]}s infinite ease-in-out` 
                 }}
               />
             ))}

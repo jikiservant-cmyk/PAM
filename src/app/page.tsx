@@ -4,25 +4,24 @@
 import Link from "next/link"
 import { MessageSquare, ChevronDown, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { PlaceHolderImages } from "@/app/lib/placeholder-images"
 import { ImageReveal } from "@/components/ImageReveal"
 import { KineticHeadline } from "@/components/KineticHeadline"
 import { MagneticButton } from "@/components/MagneticButton"
 import { InkFlowText } from "@/components/InkFlowText"
 
 export default function Home() {
-  const heroImg = PlaceHolderImages.find(img => img.id === 'community-gathering')
-  const visionImg = PlaceHolderImages.find(img => img.id === 'hero-church')
+  const heroImg = { imageUrl: "/hero/IMG_8911.jpg" }
+  const visionImg = { imageUrl: "/hero/IMG_8930.JPG" }
 
   return (
     <div className="flex flex-col w-full relative">
       {/* Hero Section with Mobile-Compatible Parallax */}
-      <section className="relative h-screen w-full overflow-hidden flex items-center justify-center bg-[#2D2B44]">
+      <section className="relative h-screen w-full overflow-hidden flex items-center justify-center bg-[#04301F]">
         <div className="absolute inset-0 overflow-hidden pointer-events-none" style={{ clipPath: 'inset(0)' }}>
           <div 
             className="fixed inset-0 w-full h-full bg-center bg-cover -z-10"
             style={{
-              backgroundImage: `url(${heroImg?.imageUrl || "https://picsum.photos/seed/church-hero/1920/1080"})`,
+              backgroundImage: `url(${heroImg?.imageUrl || "/hero/IMG_8911.jpg"})`,
             }}
           />
           <div className="absolute inset-0 bg-black/50" />
