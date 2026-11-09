@@ -1,5 +1,6 @@
 'use client';
 
+import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { KineticHeadline } from "@/components/KineticHeadline"
@@ -125,8 +126,10 @@ export default function MinistriesPage() {
                 </InkFlowText>
                 <div className="pt-4">
                   <MagneticButton>
-                    <Button className={cn("h-14 px-10 rounded-full font-black text-lg group", min.btnClass)}>
-                      LEARN MORE <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                    <Button asChild className={cn("h-14 px-10 rounded-full font-black text-lg group", min.btnClass)}>
+                      <Link href="/contact">
+                        LEARN MORE <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                      </Link>
                     </Button>
                   </MagneticButton>
                 </div>
@@ -144,8 +147,10 @@ export default function MinistriesPage() {
             className="text-4xl md:text-7xl font-black uppercase font-headline mb-12"
           />
           <MagneticButton>
-            <Button variant="outline" className="border-[#FFB800] text-[#FFB800] hover:bg-[#FFB800] hover:text-[#003322] font-black h-20 px-12 rounded-full text-2xl group transition-all duration-500">
-              JOIN THE NETWORK <ArrowRight className="ml-2 h-8 w-8 group-hover:translate-x-2 transition-transform" />
+            <Button asChild variant="outline" className="bg-transparent border-[#FFB800] text-[#FFB800] hover:bg-[#FFB800] hover:text-[#003322] font-black h-20 px-12 rounded-full text-2xl group transition-all duration-500">
+              <Link href="/fellowship">
+                JOIN THE NETWORK <ArrowRight className="ml-2 h-8 w-8 group-hover:translate-x-2 transition-transform" />
+              </Link>
             </Button>
           </MagneticButton>
         </div>

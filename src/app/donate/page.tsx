@@ -1,5 +1,7 @@
 "use client"
 
+import Link from "next/link"
+
 import * as React from "react"
 import { Heart, ShieldCheck, CreditCard, Banknote, Smartphone, ArrowRight, Users, PlayCircle, Star } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -195,8 +197,10 @@ export default function DonatePage() {
             className="text-4xl md:text-7xl font-black uppercase font-headline mb-16"
           />
           <MagneticButton strength={30}>
-            <Button className="bg-[#FFB800] text-[#003322] hover:bg-[#FFB800]/90 font-black h-20 px-16 rounded-full text-2xl group transition-all duration-500 shadow-2xl">
-              JOIN THE MISSION <ArrowRight className="ml-4 h-8 w-8 group-hover:translate-x-2 transition-transform" />
+            <Button asChild className="bg-[#FFB800] text-[#003322] hover:bg-[#FFB800]/90 font-black h-20 px-16 rounded-full text-2xl group transition-all duration-500 shadow-2xl">
+              <Link href="/fellowship">
+                JOIN THE MISSION <ArrowRight className="ml-4 h-8 w-8 group-hover:translate-x-2 transition-transform" />
+              </Link>
             </Button>
           </MagneticButton>
         </div>

@@ -1,4 +1,3 @@
-
 'use client';
 
 import Link from "next/link"
@@ -76,9 +75,11 @@ export default function Home() {
                 and journeying with the next generation.
               </InkFlowText>
               <MagneticButton>
-                <Button className="bg-[#7B1E3A] hover:bg-[#63172E] text-white font-bold h-14 px-8 rounded-full text-lg group">
+                <Button asChild className="bg-[#7B1E3A] hover:bg-[#63172E] text-white font-bold h-14 px-8 rounded-full text-lg group">
+                  <Link href="/fellowship">
                   Join the Mission
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                  </Link>
                 </Button>
               </MagneticButton>
             </div>

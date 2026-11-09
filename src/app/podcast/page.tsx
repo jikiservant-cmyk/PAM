@@ -1,5 +1,6 @@
 'use client';
 
+import Link from "next/link";
 import React from "react";
 import { Play, ArrowRight, Clock, Calendar, Volume2, SkipForward, SkipBack } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -84,9 +85,12 @@ export default function PodcastPage() {
 
           <div className="flex items-center space-x-8">
             <MagneticButton strength={30}>
-              <button className="bg-[#FFB800] text-[#003322] w-24 h-24 rounded-full flex items-center justify-center shadow-lg group hover:scale-110 transition-transform">
+              <a
+                href="#media-library"
+                className="bg-[#FFB800] text-[#003322] w-24 h-24 rounded-full flex items-center justify-center shadow-lg group hover:scale-110 transition-transform"
+              >
                 <Play className="h-10 w-10 fill-[#003322] ml-1 group-hover:scale-110 transition-transform" />
-              </button>
+              </a>
             </MagneticButton>
             <div className="space-y-1">
               <p className="font-bold text-xl">Listen Now</p>
@@ -97,6 +101,7 @@ export default function PodcastPage() {
       </section>
 
       {/* 2. Archive List */}
+      <span id="media-library" />
       <section className="py-24 bg-[#1A1A1A]">
         <div className="container mx-auto px-6 md:px-12 max-w-6xl">
           <div className="mb-16">
@@ -144,8 +149,10 @@ export default function PodcastPage() {
                     <span>{ep.duration}</span>
                   </div>
                   <MagneticButton>
-                    <Button variant="outline" className="border-white/20 text-white hover:bg-[#FFB800] hover:text-[#003322] hover:border-[#FFB800] font-black rounded-full px-8 group">
-                      LISTEN NOW <Play className="ml-2 h-4 w-4 fill-current" />
+                    <Button asChild variant="outline" className="bg-transparent border-white/20 text-white hover:bg-[#FFB800] hover:text-[#003322] hover:border-[#FFB800] font-black rounded-full px-8 group">
+                      <Link href="/contact">
+                        REQUEST AUDIO <Play className="ml-2 h-4 w-4 fill-current" />
+                      </Link>
                     </Button>
                   </MagneticButton>
                 </div>
@@ -172,9 +179,9 @@ export default function PodcastPage() {
           {/* Controls */}
           <div className="flex flex-col items-center flex-1 space-y-2">
             <div className="flex items-center space-x-8">
-              <button className="text-white/60 hover:text-[#FFB800] transition-colors"><SkipBack className="h-5 w-5" /></button>
-              <button className="bg-white text-[#3E3E4E] hover:bg-[#FFB800] hover:text-[#003322] w-10 h-10 rounded-full flex items-center justify-center transition-colors"><Play className="h-5 w-5 fill-current ml-0.5" /></button>
-              <button className="text-white/60 hover:text-[#FFB800] transition-colors"><SkipForward className="h-5 w-5" /></button>
+              <span className="text-white/60"><SkipBack className="h-5 w-5" /></span>
+              <span className="bg-white text-[#3E3E4E] w-10 h-10 rounded-full flex items-center justify-center"><Play className="h-5 w-5 fill-current ml-0.5" /></span>
+              <span className="text-white/60"><SkipForward className="h-5 w-5" /></span>
             </div>
             {/* Visualizer & Progress */}
             <div className="w-full max-w-lg flex items-center space-x-4">

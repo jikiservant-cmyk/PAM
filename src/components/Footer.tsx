@@ -16,10 +16,10 @@ export function Footer() {
               Raising spiritual parents, nurturing a generation rooted in faith, character and service.
             </p>
             <div className="flex space-x-8">
-              <Link href="#" className="hover:text-[#E9A7BC] transition-all hover:scale-110"><Facebook className="h-6 w-6" /></Link>
-              <Link href="#" className="hover:text-[#E9A7BC] transition-all hover:scale-110"><Twitter className="h-6 w-6" /></Link>
-              <Link href="#" className="hover:text-[#E9A7BC] transition-all hover:scale-110"><Instagram className="h-6 w-6" /></Link>
-              <Link href="#" className="hover:text-[#E9A7BC] transition-all hover:scale-110"><Youtube className="h-6 w-6" /></Link>
+              <Link href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="hover:text-[#E9A7BC] transition-all hover:scale-110"><Facebook className="h-6 w-6" /></Link>
+              <Link href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="hover:text-[#E9A7BC] transition-all hover:scale-110"><Twitter className="h-6 w-6" /></Link>
+              <Link href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover:text-[#E9A7BC] transition-all hover:scale-110"><Instagram className="h-6 w-6" /></Link>
+              <Link href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="hover:text-[#E9A7BC] transition-all hover:scale-110"><Youtube className="h-6 w-6" /></Link>
             </div>
           </div>
 

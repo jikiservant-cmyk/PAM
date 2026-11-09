@@ -1,5 +1,6 @@
 'use client';
 
+import Link from "next/link"
 import React from "react";
 import { ArrowRight, Calendar as CalendarIcon, MapPin, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -80,7 +81,7 @@ export default function EventsPage() {
           <ImageReveal 
             src="/card/pam-mentoring.jpg" 
             alt="Featured Event" 
-            className="w-full h-full grayscale brightness-75 transition-transform duration-[10000ms] group-hover:scale-110"
+            className="w-full h-full grayscale brightness-75 transition-transform [transition-duration:10000ms] group-hover:scale-110"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent lg:hidden" />
         </div>
@@ -100,8 +101,10 @@ export default function EventsPage() {
             </InkFlowText>
             <div className="pt-8">
               <MagneticButton>
-                <Button className="bg-[#FFB800] text-[#003322] hover:bg-[#FFB800]/90 font-black h-16 px-10 rounded-full text-xl group">
-                  RESERVE A SEAT <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform" />
+                <Button asChild className="bg-[#FFB800] text-[#003322] hover:bg-[#FFB800]/90 font-black h-16 px-10 rounded-full text-xl group">
+                  <Link href="/contact">
+                    RESERVE A SEAT <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform" />
+                  </Link>
                 </Button>
               </MagneticButton>
             </div>
@@ -157,8 +160,10 @@ export default function EventsPage() {
                   
                   <div className="pt-4">
                     <MagneticButton className="w-full">
-                      <Button className="w-full h-12 bg-white text-[#3E3E4E] hover:bg-[#FFB800] hover:text-[#003322] font-black uppercase tracking-wider rounded-full transition-colors group">
-                        REGISTER <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                      <Button asChild className="w-full h-12 bg-white text-[#3E3E4E] hover:bg-[#FFB800] hover:text-[#003322] font-black uppercase tracking-wider rounded-full transition-colors group">
+                        <Link href="/contact">
+                          REGISTER <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                        </Link>
                       </Button>
                     </MagneticButton>
                   </div>
@@ -177,8 +182,10 @@ export default function EventsPage() {
             className="text-4xl md:text-7xl font-black uppercase font-headline mb-12"
           />
           <MagneticButton>
-            <Button variant="outline" className="border-[#FFB800] text-[#FFB800] hover:bg-[#FFB800] hover:text-[#003322] font-black h-20 px-12 rounded-full text-2xl group">
-              SUBSCRIBE TO CALENDAR <ArrowRight className="ml-2 h-8 w-8 group-hover:translate-x-2 transition-transform" />
+            <Button asChild variant="outline" className="bg-transparent border-[#FFB800] text-[#FFB800] hover:bg-[#FFB800] hover:text-[#003322] font-black h-20 px-12 rounded-full text-2xl group">
+              <Link href="/contact">
+                SUBSCRIBE TO CALENDAR <ArrowRight className="ml-2 h-8 w-8 group-hover:translate-x-2 transition-transform" />
+              </Link>
             </Button>
           </MagneticButton>
         </div>

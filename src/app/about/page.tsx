@@ -1,6 +1,6 @@
-
 'use client';
 
+import Link from "next/link"
 import Image from "next/image"
 import { Mail, Phone, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -206,8 +206,10 @@ export default function AboutPage() {
                 </div>
                 <div className="pt-4">
                   <MagneticButton>
-                    <Button variant="outline" className="border-[#2D2B44] text-[#2D2B44] font-bold hover:bg-[#2D2B44] hover:text-white rounded-full px-6 group">
-                      Contact <Mail className="ml-2 h-4 w-4 group-hover:scale-110 transition-transform" />
+                    <Button asChild variant="outline" className="border-[#2D2B44] text-[#2D2B44] font-bold hover:bg-[#2D2B44] hover:text-white rounded-full px-6 group">
+                      <Link href="/contact">
+                        Contact <Mail className="ml-2 h-4 w-4 group-hover:scale-110 transition-transform" />
+                      </Link>
                     </Button>
                   </MagneticButton>
                 </div>
@@ -225,8 +227,10 @@ export default function AboutPage() {
             className="text-4xl md:text-6xl font-black uppercase font-headline mb-8"
           />
           <MagneticButton>
-            <Button className="bg-[#FFB800] text-[#2D2B44] hover:bg-[#FFB800]/90 font-black h-16 px-10 rounded-full text-xl group">
-              JOIN OUR TEAM <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform" />
+            <Button asChild className="bg-[#FFB800] text-[#2D2B44] hover:bg-[#FFB800]/90 font-black h-16 px-10 rounded-full text-xl group">
+              <Link href="/fellowship">
+                JOIN OUR TEAM <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform" />
+              </Link>
             </Button>
           </MagneticButton>
         </div>
