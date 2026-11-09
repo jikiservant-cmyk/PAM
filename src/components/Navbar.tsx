@@ -20,7 +20,7 @@ export function Navbar() {
   const pathname = usePathname()
 
   return (
-    <header className="w-full z-50 sticky top-0 bg-[#3E3E4E] shadow-lg">
+    <header className="w-full z-50 sticky top-0 bg-[#4A1626] shadow-lg">
       {/* Utility bar */}
       <div className="hidden md:block border-b border-white/10 bg-[#2D2B44]">
         <div className="container mx-auto px-6 lg:px-12">
@@ -97,7 +97,7 @@ export function Navbar() {
 
       {/* Mobile Links */}
       {isOpen && (
-        <div className="md:hidden bg-[#3E3E4E] border-t border-white/5 px-6 py-8 space-y-6">
+        <div className="md:hidden bg-[#4A1626] border-t border-white/5 px-6 py-8 space-y-6">
           {navLinks.map((link) => (
             <Link
               key={link.name}

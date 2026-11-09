@@ -5,33 +5,36 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Papas and Mamas Network — Site Walkthrough</title>
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { background:#14131c; color:#f2f0f5; font-family:ui-sans-serif,-apple-system,"Segoe UI",Roboto,sans-serif; }
-  header { max-width:1100px; margin:0 auto; padding:64px 24px 30px; }
-  .kicker { font-size:11px; letter-spacing:.3em; text-transform:uppercase; color:#D12E8B; font-weight:800; margin-bottom:14px; }
-  h1 { font-size:clamp(28px,5vw,48px); font-weight:900; letter-spacing:-.03em; line-height:1; }
-  h1 em { font-style:normal; color:#FFB800; }
-  .sub { margin-top:16px; color:#9c98ad; font-size:16px; line-height:1.65; max-width:66ch; }
-  .note { margin-top:20px; padding:16px 20px; border-left:3px solid #FFB800; background:#1e1c2a; color:#b8b3c7; font-size:13.5px; line-height:1.6; border-radius:0 6px 6px 0; }
-  .note strong { color:#f2f0f5; }
-  nav { max-width:1100px; margin:26px auto 0; padding:0 24px; display:flex; flex-wrap:wrap; gap:8px; }
-  nav a { font-size:11.5px; text-transform:uppercase; letter-spacing:.12em; font-weight:700; padding:9px 15px; border-radius:999px; background:#232030; color:#cfcadb; text-decoration:none; border:1px solid #322e42; }
-  nav a:hover { background:#D12E8B; border-color:#D12E8B; color:#fff; }
-  section { max-width:1100px; margin:0 auto; padding:52px 24px 0; scroll-margin-top:20px; }
-  .label { font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:#D12E8B; font-weight:800; }
-  h2 { font-size:24px; font-weight:800; margin:6px 0 4px; letter-spacing:-.02em; }
-  .route { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:12.5px; color:#7d7890; margin-bottom:16px; }
-  .shot { border-radius:12px; overflow:hidden; box-shadow:0 18px 48px rgba(0,0,0,.55); border:1px solid #2b2738; }
-  .shot img { display:block; width:100%; height:auto; }
-  footer { max-width:1100px; margin:0 auto; padding:70px 24px 90px; color:#6f6a82; font-size:13px; line-height:1.7; }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#101018;color:#f2f0f5;font-family:ui-sans-serif,-apple-system,"Segoe UI",Roboto,sans-serif}
+  header{max-width:1100px;margin:0 auto;padding:64px 24px 30px}
+  .kicker{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#FFB800;font-weight:800;margin-bottom:14px}
+  h1{font-size:clamp(28px,5vw,48px);font-weight:900;letter-spacing:-.03em;line-height:1.02}
+  h1 em{font-style:normal;color:#2FA36B}
+  .sub{margin-top:16px;color:#9c98ad;font-size:16px;line-height:1.65;max-width:66ch}
+  .note{margin-top:20px;padding:16px 20px;border-left:3px solid #2FA36B;background:#181725;color:#b8b3c7;font-size:13.5px;line-height:1.6;border-radius:0 6px 6px 0}
+  .note strong{color:#f2f0f5}
+  nav{max-width:1100px;margin:26px auto 0;padding:0 24px;display:flex;flex-wrap:wrap;gap:8px}
+  nav a{font-size:11.5px;text-transform:uppercase;letter-spacing:.12em;font-weight:700;padding:9px 15px;border-radius:999px;background:#1f1e2c;color:#cfcadb;text-decoration:none;border:1px solid #302d42}
+  nav a:hover{background:#04301F;border-color:#2FA36B;color:#fff}
+  section{max-width:1100px;margin:0 auto;padding:52px 24px 0;scroll-margin-top:20px}
+  .label{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:#FFB800;font-weight:800}
+  h2{font-size:24px;font-weight:800;margin:6px 0 4px;letter-spacing:-.02em}
+  .route{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12.5px;color:#7d7890;margin-bottom:16px}
+  .shot{border-radius:12px;overflow:hidden;box-shadow:0 18px 48px rgba(0,0,0,.55);border:1px solid #2b2738}
+  .shot img{display:block;width:100%;height:auto}
+  footer{max-width:1100px;margin:0 auto;padding:70px 24px 90px;color:#6f6a82;font-size:13px;line-height:1.75}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+  @media(max-width:720px){.grid{grid-template-columns:1fr}}
+  .grid img{width:100%;height:230px;object-fit:cover;border-radius:8px;border:1px solid #2b2738;display:block}
 </style>
 </head>
 <body>
 <header>
   <div class="kicker">Papas and Mamas Network</div>
-  <h1>PAM — <em>full site walkthrough</em></h1>
-  <p class="sub">Every page, top to bottom, exactly as it renders. Rebranded from the NCF Church build with the design kept intact, following the structure of FOCUS Uganda.</p>
-  <p class="note"><strong>Captured in a real browser at 1440px.</strong> The sandbox has no internet, so Google Fonts were substituted with the same Montserrat / Playfair Display / Open Sans files served locally, and the stock placeholder photos the site pulls from <code>picsum.photos</code> show as flat panels. Photos in <code>public/images/</code> are real and appear exactly as they do live.</p>
+  <h1>PAM — <em>with real photography</em></h1>
+  <p class="sub">The design now leans toward FOCUS Uganda's deep green, and every grey placeholder is gone — replaced with real photographs plus new original imagery for mentoring, family and youth.</p>
+  <p class="note"><strong>Captured in a real browser at 1440px.</strong> Fonts are served locally (the sandbox has no internet), so Montserrat / Playfair Display / Open Sans render exactly as they do live. Every photograph now loads from <code>public/</code> — nothing is fetched from an external service any more.</p>
 </header>
 
 <nav>
@@ -40,32 +43,32 @@
 </nav>
 
 <section id="home"><div class="label">01 — Home</div><h2>Welcome to Papas and Mamas Network</h2><div class="route">/</div>
-  <div class="shot"><img src="home.jpg" alt="Home page"></div></section>
+  <div class="shot"><img src="home.jpg" alt="Home"></div></section>
 
-<section id="about"><div class="label">02 — About</div><h2>Our Story · Vision &amp; Mission · Core Values</h2><div class="route">/about</div>
-  <div class="shot"><img src="about.jpg" alt="About page"></div></section>
+<section id="about"><div class="label">02 — About</div><h2>Vision &amp; Mission · Core Values · Leadership</h2><div class="route">/about</div>
+  <div class="shot"><img src="about.jpg" alt="About"></div></section>
 
-<section id="programs"><div class="label">03 — Programs</div><h2>Our Core Engagement</h2><div class="route">/sermons</div>
-  <div class="shot"><img src="ministries.jpg" alt="Programs page"></div></section>
+<section id="programs"><div class="label">03 — Programs</div><h2>Seven core engagements</h2><div class="route">/sermons</div>
+  <div class="shot"><img src="ministries.jpg" alt="Programs"></div></section>
 
-<section id="events"><div class="label">04 — Events</div><h2>Upcoming Gatherings</h2><div class="route">/events</div>
-  <div class="shot"><img src="events.jpg" alt="Events page"></div></section>
+<section id="events"><div class="label">04 — Events</div><h2>Mentors' Retreat &amp; upcoming gatherings</h2><div class="route">/events</div>
+  <div class="shot"><img src="events.jpg" alt="Events"></div></section>
 
 <section id="media"><div class="label">05 — Media</div><h2>Media Library</h2><div class="route">/podcast</div>
-  <div class="shot"><img src="podcast.jpg" alt="Media page"></div></section>
+  <div class="shot"><img src="podcast.jpg" alt="Media"></div></section>
 
-<section id="give"><div class="label">06 — Give</div><h2>Give to the Network</h2><div class="route">/donate</div>
-  <div class="shot"><img src="donate.jpg" alt="Give page"></div></section>
+<section id="give"><div class="label">06 — Give</div><h2>Give to the Network (UGX)</h2><div class="route">/donate</div>
+  <div class="shot"><img src="donate.jpg" alt="Give"></div></section>
 
 <section id="contact"><div class="label">07 — Contact</div><h2>Get in Touch</h2><div class="route">/contact</div>
-  <div class="shot"><img src="contact.jpg" alt="Contact page"></div></section>
+  <div class="shot"><img src="contact.jpg" alt="Contact"></div></section>
 
 <section id="bible"><div class="label">08 — Bible Guides</div><h2>Scripture AI Finder</h2><div class="route">/scripture-finder</div>
-  <div class="shot"><img src="scripture-finder.jpg" alt="Bible Guides page"></div></section>
+  <div class="shot"><img src="scripture-finder.jpg" alt="Bible Guides"></div></section>
 
 <footer>
-  Papas and Mamas Network · Kampala, Uganda · captured 8 November 2026<br>
-  Placeholders still to fill: leader names, phone number, email address, real photography, and any statistics.
+  Papas and Mamas Network · Kampala, Uganda · captured 8 November 2026<br><br>
+  <strong style="color:#cfcadb">Still needed from you:</strong> real headshots for the three leader cards, a working phone number and email, and any statistics you want displayed.
 </footer>
 </body>
 </html>

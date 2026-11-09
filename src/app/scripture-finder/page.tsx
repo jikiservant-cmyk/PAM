@@ -54,7 +54,7 @@ export default function ScriptureFinderPage() {
         <Card className="shadow-lg border-primary/10 overflow-hidden">
           <CardHeader className="bg-primary text-primary-foreground pb-8">
             <CardTitle className="font-headline text-2xl flex items-center">
-              <Sparkles className="h-5 w-5 mr-2 text-secondary" />
+              <Sparkles className="h-5 w-5 mr-2 text-[#E9A7BC]" />
               How can we help your study today?
             </CardTitle>
             <CardDescription className="text-primary-foreground/70">
@@ -134,7 +134,7 @@ export default function ScriptureFinderPage() {
                 <Card key={i} className="hover:shadow-md transition-all group border-primary/5">
                   <CardContent className="p-6">
                     <div className="flex justify-between items-start mb-4">
-                      <span className="font-headline font-bold text-secondary-foreground bg-secondary/20 px-3 py-1 rounded-md">
+                      <span className="font-headline font-bold text-[#7B1E3A] bg-[#7B1E3A]/10 px-3 py-1 rounded-md">
                         {verse.reference}
                       </span>
                       <div className="flex space-x-1 opacity-0 group-hover:opacity-100 transition-opacity">

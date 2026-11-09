@@ -12,17 +12,17 @@
     --popover-foreground: 243 22% 10%;
     --primary: 243 22% 22%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 326 64% 50%;
+    --secondary: 337 61% 30%;
     --secondary-foreground: 0 0% 100%;
     --muted: 243 10% 96%;
     --muted-foreground: 243 15% 45%;
-    --accent: 326 64% 50%;
+    --accent: 337 61% 30%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
     --border: 243 15% 90%;
     --input: 243 15% 90%;
-    --ring: 326 64% 50%;
+    --ring: 337 61% 30%;
     --radius: 0.5rem;
   }
 }

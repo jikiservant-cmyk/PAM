@@ -52,8 +52,8 @@ export default function Home() {
         <MagneticButton strength={20}>
           <button className="bg-[#2D2B44] text-white flex items-center space-x-3 px-6 py-4 rounded-full shadow-2xl hover:scale-105 active:scale-95 transition-all group border-2 border-white/10">
             <div className="relative">
-              <MessageSquare className="h-6 w-6 text-[#D12E8B]" />
-              <div className="absolute -top-1 -right-1 bg-[#D12E8B] w-3 h-3 rounded-full border-2 border-[#2D2B44] animate-pulse" />
+              <MessageSquare className="h-6 w-6 text-[#E9A7BC]" />
+              <div className="absolute -top-1 -right-1 bg-[#E9A7BC] w-3 h-3 rounded-full border-2 border-[#3A1020] animate-pulse" />
             </div>
             <span className="font-bold text-lg">Chat with us</span>
           </button>
@@ -73,7 +73,7 @@ export default function Home() {
               leaders with mature believers who walk with them through life, growing
               them in faith, character and service.
             </InkFlowText>
-            <div className="h-1 w-20 bg-[#D12E8B] mx-auto" />
+            <div className="h-1 w-20 bg-[#7B1E3A] mx-auto" />
           </div>
         </div>
       </section>
@@ -90,7 +90,7 @@ export default function Home() {
               />
             </div>
             <div className="order-1 lg:order-2 space-y-8 text-white">
-              <span className="text-[#D12E8B] font-bold uppercase tracking-widest">Our Vision</span>
+              <span className="text-[#E9A7BC] font-bold uppercase tracking-widest">Our Vision</span>
               <KineticHeadline 
                 lines={["BUILDING A", "BETTER TOMORROW"]}
                 className="text-4xl md:text-6xl font-black uppercase font-headline leading-none"
@@ -101,7 +101,7 @@ export default function Home() {
                 and journeying with the next generation.
               </InkFlowText>
               <MagneticButton>
-                <Button className="bg-[#D12E8B] hover:bg-[#B02675] text-white font-bold h-14 px-8 rounded-full text-lg group">
+                <Button className="bg-[#7B1E3A] hover:bg-[#63172E] text-white font-bold h-14 px-8 rounded-full text-lg group">
                   Join the Mission
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
@@ -116,24 +116,24 @@ export default function Home() {
         <div className="container mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Link href="/events" className="group">
-              <div className="bg-white p-10 h-full shadow-sm hover:shadow-xl transition-all duration-300 border-t-4 border-[#D12E8B]">
+              <div className="bg-white p-10 h-full shadow-sm hover:shadow-xl transition-all duration-300 border-t-4 border-[#7B1E3A]">
                 <KineticHeadline lines={["Events"]} className="text-2xl font-black text-[#2D2B44] mb-4 uppercase font-headline" />
                 <InkFlowText className="text-muted-foreground mb-6 text-base font-body">Stay updated with our mentoring retreats, training and gatherings.</InkFlowText>
-                <span className="text-[#D12E8B] font-bold text-sm tracking-widest uppercase">Learn More →</span>
+                <span className="text-[#7B1E3A] font-bold text-sm tracking-widest uppercase">Learn More →</span>
               </div>
             </Link>
             <Link href="/sermons" className="group">
-              <div className="bg-white p-10 h-full shadow-sm hover:shadow-xl transition-all duration-300 border-t-4 border-[#D12E8B]">
+              <div className="bg-white p-10 h-full shadow-sm hover:shadow-xl transition-all duration-300 border-t-4 border-[#7B1E3A]">
                 <KineticHeadline lines={["Programs"]} className="text-2xl font-black text-[#2D2B44] mb-4 uppercase font-headline" />
                 <InkFlowText className="text-muted-foreground mb-6 text-base font-body">Find a place that fits your season of life.</InkFlowText>
-                <span className="text-[#D12E8B] font-bold text-sm tracking-widest uppercase">Explore →</span>
+                <span className="text-[#7B1E3A] font-bold text-sm tracking-widest uppercase">Explore →</span>
               </div>
             </Link>
             <Link href="/donate" className="group">
-              <div className="bg-white p-10 h-full shadow-sm hover:shadow-xl transition-all duration-300 border-t-4 border-[#D12E8B]">
+              <div className="bg-white p-10 h-full shadow-sm hover:shadow-xl transition-all duration-300 border-t-4 border-[#7B1E3A]">
                 <KineticHeadline lines={["Giving"]} className="text-2xl font-black text-[#2D2B44] mb-4 uppercase font-headline" />
                 <InkFlowText className="text-muted-foreground mb-6 text-base font-body">Partner with us in raising a generation through secure giving.</InkFlowText>
-                <span className="text-[#D12E8B] font-bold text-sm tracking-widest uppercase">Give Now →</span>
+                <span className="text-[#7B1E3A] font-bold text-sm tracking-widest uppercase">Give Now →</span>
               </div>
             </Link>
           </div>
