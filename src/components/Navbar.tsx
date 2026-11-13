@@ -11,6 +11,7 @@ const navLinks = [
   { name: "Programs", href: "/sermons" },
   { name: "Events", href: "/events" },
   { name: "Media", href: "/podcast" },
+  { name: "Gallery", href: "/gallery" },
   { name: "Give", href: "/donate" },
   { name: "Contact", href: "/contact" },
   { name: "Fellowships", href: "/fellowship" },
@@ -42,7 +43,7 @@ export function Navbar() {
           {/* Logo & Links Group */}
           <div className="flex items-center">
             {/* Logo - Far Left */}
-            <Link href="/" className="flex items-center mr-12 group">
+            <Link href="/" aria-label="PAM Network home" className="flex items-center mr-6 xl:mr-10 group">
               <svg 
                 width="36" 
                 height="36" 
@@ -62,14 +63,14 @@ export function Navbar() {
             </Link>
 
             {/* Desktop Links */}
-            <div className="hidden md:flex items-center space-x-10">
+            <div className="hidden lg:flex items-center space-x-5 xl:space-x-7">
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
                   href={link.href}
                   className={cn(
-                    "text-xs font-medium uppercase tracking-[0.2em] transition-all hover:text-white/70 font-headline text-white whitespace-nowrap",
-                    pathname === link.href ? "opacity-100" : "opacity-80"
+                    "text-[10px] xl:text-xs font-medium uppercase tracking-[0.12em] transition-all hover:text-white/70 font-headline text-white whitespace-nowrap border-b border-transparent pb-1",
+                    pathname === link.href ? "opacity-100 border-[#FFB800]" : "opacity-80"
                   )}
                 >
                   {link.name}
@@ -80,7 +81,7 @@ export function Navbar() {
 
           {/* Right Group: Search Icon */}
           <div className="flex items-center">
-            <button className="p-2 text-white hover:text-white/70 transition-colors">
+            <button aria-label="Search" className="p-2 text-white hover:text-white/70 transition-colors">
               <Search className="h-5 w-5" />
             </button>
             
@@ -88,7 +89,9 @@ export function Navbar() {
             <button
               onClick={() => setIsOpen(!isOpen)}
               aria-label="Toggle menu"
-              className="md:hidden ml-4 p-2 text-white"
+              aria-expanded={isOpen}
+              aria-controls="mobile-navigation"
+              className="lg:hidden ml-4 p-2 text-white"
             >
               {isOpen ? <X className="h-7 w-7" /> : <Menu className="h-7 w-7" />}
             </button>
@@ -98,7 +101,7 @@ export function Navbar() {
 
       {/* Mobile Links */}
       {isOpen && (
-        <div className="md:hidden bg-[#4A1626] border-t border-white/5 px-6 py-8 space-y-6">
+        <div id="mobile-navigation" className="lg:hidden bg-[#4A1626] border-t border-white/5 px-6 py-8 space-y-6">
           {navLinks.map((link) => (
             <Link
               key={link.name}
