@@ -11,9 +11,10 @@ import { RotatingHero } from "@/components/RotatingHero"
 import { StatsSection } from "@/components/StatsSection"
 import { GalleryPreview } from "@/components/GalleryPreview"
 import { heroSlides } from "@/app/lib/hero-slides"
+import { siteImages } from "@/app/lib/gallery-albums"
 
 export default function Home() {
-  const visionImg = { imageUrl: "/hero/IMG_8930.JPG" }
+  const visionImg = { imageUrl: siteImages.homeVision }
 
   return (
     <div className="flex flex-col w-full relative">
@@ -59,7 +60,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="order-2 lg:order-1">
               <ImageReveal 
-                src={visionImg?.imageUrl || "/images/IMG_8930.JPG"}
+                src={visionImg.imageUrl}
                 alt="Our Vision"
                 className="rounded-lg shadow-2xl aspect-[4/3]"
               />

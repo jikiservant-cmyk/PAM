@@ -9,6 +9,7 @@ import { KineticHeadline } from "@/components/KineticHeadline";
 import { InkFlowText } from "@/components/InkFlowText";
 import { BlurFocusText } from "@/components/BlurFocusText";
 import { ImageReveal } from "@/components/ImageReveal";
+import { siteImages } from "@/app/lib/gallery-albums";
 
 // Deterministic bar-animation timings. Random values here caused a
 // server/client hydration mismatch (they differ on every render).
@@ -21,7 +22,7 @@ const episodes = [
     description: "How our daily habits and the environments we grow up in shape our walk with God, and the structures we build our lives upon.",
     date: "OCT 15, 2025",
     duration: "42 MIN",
-    image: "/card/pam-youth.jpg"
+    image: siteImages.podcastEpisodes[0]
   },
   {
     number: "03",
@@ -29,7 +30,7 @@ const episodes = [
     description: "Navigating complex moral questions with compassion and truth, a conversation on the pressures young people face today.",
     date: "OCT 08, 2025",
     duration: "38 MIN",
-    image: "/card/pam-mamas.jpg"
+    image: siteImages.podcastEpisodes[1]
   },
   {
     number: "02",
@@ -37,7 +38,7 @@ const episodes = [
     description: "Finding silence and connection with God in the middle of Kampala's relentless noise, work and family demands.",
     date: "OCT 01, 2025",
     duration: "45 MIN",
-    image: "/card/IMG_8888.jpg"
+    image: siteImages.podcastEpisodes[2]
   },
   {
     number: "01",
@@ -45,7 +46,7 @@ const episodes = [
     description: "Our first episode, on why Papas and Mamas Network exists and why we believe spiritual parenting changes everything.",
     date: "SEP 24, 2025",
     duration: "50 MIN",
-    image: "/card/pam-mentoring.jpg"
+    image: siteImages.podcastEpisodes[3]
   }
 ];
 
@@ -59,7 +60,7 @@ export default function PodcastPage() {
           <BlurFocusText className="relative aspect-square w-full max-w-md">
              <div className="absolute inset-0 bg-[#FFB800]/20 blur-3xl rounded-full scale-110 opacity-30 animate-pulse" />
              <ImageReveal 
-              src="/card/pam-mamas.jpg" 
+              src={siteImages.podcastCover}
               alt="Latest Episode Cover" 
               className="w-full h-full shadow-2xl rounded-sm"
             />
@@ -168,7 +169,7 @@ export default function PodcastPage() {
           {/* Track Info */}
           <div className="flex items-center space-x-4 max-w-[200px] md:max-w-md overflow-hidden">
             <div className="hidden md:block w-12 h-12 bg-[#FFB800]/20 rounded overflow-hidden">
-              <img src="/card/IMG_8950.jpg" alt="Now Playing" className="w-full h-full object-cover" />
+              <img src={siteImages.podcastNowPlaying} alt="Now Playing" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
             </div>
             <div className="flex flex-col">
               <span className="text-white font-bold text-sm truncate uppercase tracking-wider">Rhythms of Restoration</span>

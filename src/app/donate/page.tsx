@@ -14,6 +14,7 @@ import { KineticHeadline } from "@/components/KineticHeadline"
 import { MagneticButton } from "@/components/MagneticButton"
 import { InkFlowText } from "@/components/InkFlowText"
 import { BlurFocusText } from "@/components/BlurFocusText"
+import { siteImages } from "@/app/lib/gallery-albums"
 
 export default function DonatePage() {
   const [amount, setAmount] = React.useState<string>("50")
@@ -35,7 +36,7 @@ export default function DonatePage() {
           <div 
             className="fixed inset-0 w-full h-full bg-center bg-cover -z-10 grayscale brightness-[0.3]"
             style={{
-              backgroundImage: `url(/hero/IMG_8930.JPG)`,
+              backgroundImage: `url(${siteImages.donateHeroBackground})`,
             }}
           />
         </div>

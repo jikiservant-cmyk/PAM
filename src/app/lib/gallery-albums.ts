@@ -127,3 +127,60 @@ export const allGalleryPhotos: GalleryPhoto[] = Array.from(
   { length: Math.max(...galleryAlbums.map((album) => album.imageKeys.length)) },
   (_, index) => galleryAlbums.flatMap((album) => albumPhotos[album.id][index] ?? [])
 ).flat();
+
+const launchPhoto = (index: number, width: number) =>
+  googlePhotoUrl(albumPhotos.launch[index].imageKey, width);
+const networkPhoto = (index: number, width: number) =>
+  googlePhotoUrl(albumPhotos.network[index].imageKey, width);
+
+/**
+ * Curated picks from the same two albums for the rest of the site (heroes,
+ * page backgrounds, cards, covers). Widths match how each slot is displayed:
+ * full-screen heroes/backgrounds use 2000, large feature images 1600/1200,
+ * and cards/thumbnails 800 or smaller. To change a slot, edit the index here —
+ * no page files need to change.
+ */
+export const siteImages = {
+  heroSlides: [
+    launchPhoto(0, 2000),
+    networkPhoto(0, 2000),
+    launchPhoto(1, 2000),
+    networkPhoto(1, 2000),
+  ],
+  homeVision: launchPhoto(2, 1600),
+  aboutHeroBackground: networkPhoto(2, 2000),
+  aboutHistory: launchPhoto(3, 1600),
+  aboutTeam: [networkPhoto(3, 800), launchPhoto(4, 800), networkPhoto(4, 800)],
+  eventsBackground: launchPhoto(5, 2000),
+  eventsFeatured: networkPhoto(5, 1600),
+  eventsCards: [
+    launchPhoto(6, 800),
+    networkPhoto(6, 800),
+    launchPhoto(7, 800),
+    networkPhoto(7, 800),
+    launchPhoto(8, 800),
+    networkPhoto(8, 800),
+  ],
+  sermonsBackground: networkPhoto(9, 2000),
+  sermonsCards: [
+    launchPhoto(9, 1200),
+    networkPhoto(10, 1200),
+    launchPhoto(10, 1200),
+    networkPhoto(11, 1200),
+    launchPhoto(11, 1200),
+    networkPhoto(12, 1200),
+    launchPhoto(12, 1200),
+  ],
+  podcastCover: launchPhoto(13, 1200),
+  podcastEpisodes: [
+    networkPhoto(13, 800),
+    launchPhoto(14, 800),
+    networkPhoto(14, 800),
+    launchPhoto(15, 800),
+  ],
+  podcastNowPlaying: networkPhoto(15, 400),
+  contactHeroBackground: launchPhoto(16, 2000),
+  contactBottom: networkPhoto(16, 2000),
+  donateHeroBackground: launchPhoto(17, 2000),
+  fellowshipBackground: networkPhoto(17, 2000),
+};

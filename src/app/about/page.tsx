@@ -10,6 +10,7 @@ import { MagneticButton } from "@/components/MagneticButton"
 import { BlurFocusText } from "@/components/BlurFocusText"
 import { Separator } from "@/components/ui/separator"
 import { ImageReveal } from "@/components/ImageReveal"
+import { siteImages } from "@/app/lib/gallery-albums"
 
 const coreValues = [
   {
@@ -39,24 +40,24 @@ const team = [
     name: "[Papa name]",
     role: "Founding Papa",
     bio: "Visionary leader committed to mentoring the next generation.",
-    image: "/portrait/leader-1.jpg"
+    image: siteImages.aboutTeam[0]
   },
   {
     name: "[Mama name]",
     role: "Founding Mama",
     bio: "Passionate about nurturing young people and strengthening families.",
-    image: "/portrait/leader-2.jpg"
+    image: siteImages.aboutTeam[1]
   },
   {
     name: "[Papa name]",
     role: "Mentorship Lead",
     bio: "Equipping mentors and walking with emerging leaders.",
-    image: "/portrait/papa.jpg"
+    image: siteImages.aboutTeam[2]
   }
 ]
 
 export default function AboutPage() {
-  const historyImg = "/hero/IMG_8919.jpg";
+  const historyImg = siteImages.aboutHistory;
 
   return (
     <div className="flex flex-col w-full">
@@ -66,7 +67,7 @@ export default function AboutPage() {
           <div 
             className="fixed inset-0 w-full h-full bg-center bg-cover -z-10 grayscale-[0.3] brightness-[0.4]"
             style={{
-              backgroundImage: `url(/hero/IMG_8911.jpg)`,
+              backgroundImage: `url(${siteImages.aboutHeroBackground})`,
             }}
           />
         </div>

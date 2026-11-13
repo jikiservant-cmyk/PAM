@@ -8,6 +8,7 @@ import { MagneticButton } from "@/components/MagneticButton";
 import { KineticHeadline } from "@/components/KineticHeadline";
 import { InkFlowText } from "@/components/InkFlowText";
 import { ImageReveal } from "@/components/ImageReveal";
+import { siteImages } from "@/app/lib/gallery-albums";
 import { cn } from "@/lib/utils";
 
 const events = [
@@ -17,7 +18,7 @@ const events = [
     title: "Mentors' Retreat",
     location: "Training Centre",
     time: "9:00 AM",
-    image: "/card/pam-youth.jpg"
+    image: siteImages.eventsCards[0]
   },
   {
     day: "12",
@@ -25,7 +26,7 @@ const events = [
     title: "Papas & Mamas Breakfast",
     location: "Main Hall",
     time: "8:00 AM",
-    image: "/card/pam-family.jpg"
+    image: siteImages.eventsCards[1]
   },
   {
     day: "19",
@@ -33,7 +34,7 @@ const events = [
     title: "Youth Mentoring Day",
     location: "Community Hall",
     time: "10:00 AM",
-    image: "/card/pam-family.jpg"
+    image: siteImages.eventsCards[2]
   },
   {
     day: "09",
@@ -41,7 +42,7 @@ const events = [
     title: "New Mentors' Orientation",
     location: "Training Room",
     time: "9:00 AM",
-    image: "/card/IMG_8950.jpg"
+    image: siteImages.eventsCards[3]
   },
   {
     day: "16",
@@ -49,7 +50,7 @@ const events = [
     title: "Marriage Enrichment Evening",
     location: "Main Hall",
     time: "6:00 PM",
-    image: "/card/pam-mamas.jpg"
+    image: siteImages.eventsCards[4]
   },
   {
     day: "23",
@@ -57,7 +58,7 @@ const events = [
     title: "Prayer & Fasting Day",
     location: "Sanctuary",
     time: "7:00 AM",
-    image: "/card/_MG_9274.jpg"
+    image: siteImages.eventsCards[5]
   }
 ];
 
@@ -69,7 +70,7 @@ export default function EventsPage() {
         <div 
           className="fixed inset-0 w-full h-full bg-center bg-cover grayscale-[0.5] brightness-[0.3]"
           style={{
-            backgroundImage: `url(/hero/IMG_8919.jpg)`,
+            backgroundImage: `url(${siteImages.eventsBackground})`,
           }}
         />
       </div>
@@ -79,7 +80,7 @@ export default function EventsPage() {
         {/* Left: Moody Photo with subtle zoom */}
         <div className="w-full lg:w-3/5 relative min-h-[400px] lg:min-h-full overflow-hidden group">
           <ImageReveal 
-            src="/card/pam-mentoring.jpg" 
+            src={siteImages.eventsFeatured}
             alt="Featured Event" 
             className="w-full h-full grayscale brightness-75 transition-transform [transition-duration:10000ms] group-hover:scale-110"
           />
