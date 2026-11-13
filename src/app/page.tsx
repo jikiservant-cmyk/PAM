@@ -9,6 +9,7 @@ import { MagneticButton } from "@/components/MagneticButton"
 import { InkFlowText } from "@/components/InkFlowText"
 import { RotatingHero } from "@/components/RotatingHero"
 import { StatsSection } from "@/components/StatsSection"
+import { GalleryPreview } from "@/components/GalleryPreview"
 import { heroSlides } from "@/app/lib/hero-slides"
 
 export default function Home() {
@@ -86,6 +87,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <GalleryPreview />
 
       {/* Quick Links Section */}
       <section className="py-20 bg-[#F5F5F5] relative z-10">
