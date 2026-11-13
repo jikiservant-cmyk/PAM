@@ -21,3 +21,13 @@ The `/gallery` page displays 60 photos: 30 from each of these public shared albu
 4. If new photos are added to Google Photos, add their keys here too; the gallery is a curated snapshot.
 
 The homepage preview uses four photos from the same data. Navigation, footer links, and the sitemap include `/gallery`. Album-specific links use `/gallery?album=launch` and `/gallery?album=network`.
+
+## Site-wide photos
+
+The rest of the site uses the exact same album photos. Curated picks live in
+`siteImages` in `src/app/lib/gallery-albums.ts` (hero slides, page
+backgrounds, event/program/podcast cards, About portraits, etc.), sized per
+slot (2000px heroes, 800–1600px cards/features). To change any slot, edit the
+album index in `siteImages` — no page files need to change. Components load
+these hotlinks directly (`ImageReveal` uses a plain `<img>` for external
+URLs), so no local copies in `public/` are used by the code anymore.

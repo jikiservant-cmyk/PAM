@@ -42,13 +42,28 @@ export function ImageReveal({
     return () => observer.disconnect();
   }, []);
 
+  const isExternal = src.startsWith('http://') || src.startsWith('https://');
+
   return (
     <div
       ref={containerRef}
       className={cn('relative overflow-hidden group', className)}
     >
       {/* The stationary image */}
-      {width && height ? (
+      {isExternal ? (
+        // External hotlinks (Google Photos) load directly in the browser,
+        // bypassing Next's optimizer so they work even when the server
+        // cannot fetch them. See ExternalPhoto for the same approach.
+        // eslint-disable-next-line @next/next/no-img-element -- direct external hotlink, intentionally unoptimized
+        <img
+          src={src}
+          alt={alt}
+          loading="lazy"
+          decoding="async"
+          referrerPolicy="no-referrer"
+          className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
+        />
+      ) : width && height ? (
         <Image
           src={src}
           alt={alt}

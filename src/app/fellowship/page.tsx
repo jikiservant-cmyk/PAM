@@ -25,6 +25,7 @@ import {
   getCurrentFellowship,
   type Fellowship,
 } from '@/app/lib/fellowship-store';
+import { siteImages } from '@/app/lib/gallery-albums';
 
 const DAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
@@ -111,7 +112,7 @@ export default function FellowshipPage() {
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <div
               className="fixed inset-0 w-full h-full bg-center bg-cover -z-10 brightness-[0.35]"
-              style={{ backgroundImage: 'url(/hero/IMG_8919.jpg)' }}
+              style={{ backgroundImage: `url(${siteImages.fellowshipBackground})` }}
             />
           </div>
           <div className="container mx-auto px-6 relative z-10 text-center">
@@ -174,7 +175,7 @@ export default function FellowshipPage() {
         <div className="absolute inset-0 overflow-hidden pointer-events-none" style={{ clipPath: 'inset(0)' }}>
           <div
             className="fixed inset-0 w-full h-full bg-center bg-cover -z-10 brightness-[0.35]"
-            style={{ backgroundImage: 'url(/hero/IMG_8919.jpg)' }}
+            style={{ backgroundImage: `url(${siteImages.fellowshipBackground})` }}
           />
         </div>
         <div className="container mx-auto px-6 relative z-10 text-center">

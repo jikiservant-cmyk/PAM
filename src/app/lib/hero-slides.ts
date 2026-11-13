@@ -1,24 +1,25 @@
 import { HeroSlide } from '@/components/RotatingHero';
+import { siteImages } from '@/app/lib/gallery-albums';
 
 export const heroSlides: HeroSlide[] = [
   {
     eyebrow: 'WE EXIST TO RAISE UP SPIRITUAL PARENTS WHO',
     lines: ['Raise a Generation', 'Rooted in Christ'],
-    image: '/hero/IMG_8911.jpg',
+    image: siteImages.heroSlides[0],
   },
   {
     eyebrow: 'STEP INTO',
     lines: ['The Path of', 'Discipleship'],
-    image: '/hero/IMG_8919.jpg',
+    image: siteImages.heroSlides[1],
   },
   {
     eyebrow: 'PAPAS AND MAMAS NETWORK',
     lines: ['Walking With', 'The Next Generation'],
-    image: '/hero/IMG_8179.jpg',
+    image: siteImages.heroSlides[2],
   },
   {
     eyebrow: 'MENTORING THAT CHANGES FAMILIES',
     lines: ['Strong Homes', 'Stronger Communities'],
-    image: '/hero/IMG_8930.JPG',
+    image: siteImages.heroSlides[3],
   },
 ];

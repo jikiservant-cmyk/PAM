@@ -7,13 +7,14 @@ import { KineticHeadline } from "@/components/KineticHeadline"
 import { InkFlowText } from "@/components/InkFlowText"
 import { MagneticButton } from "@/components/MagneticButton"
 import { ImageReveal } from "@/components/ImageReveal"
+import { siteImages } from "@/app/lib/gallery-albums"
 import { cn } from "@/lib/utils"
 
 const ministries = [
   {
     title: "LEADERSHIP DEVELOPMENT",
     description: "Jesus came not to be served but to serve. We train young leaders in servant leadership so they grow into men and women of integrity in their homes, churches and communities.",
-    image: "/card/pam-youth.jpg",
+    image: siteImages.sermonsCards[0],
     bgColor: "bg-[#3E3E4E]",
     textColor: "text-white",
     btnClass: "bg-[#FFB800] text-[#3E3E4E] hover:bg-[#FFB800]/90"
@@ -21,7 +22,7 @@ const ministries = [
   {
     title: "DISCIPLESHIP & MENTORING",
     description: "Young people need someone who will walk with them. Our papas and mamas give time, wisdom and prayer, helping the next generation grow into mature, Christ-centred believers.",
-    image: "/card/pam-family.jpg",
+    image: siteImages.sermonsCards[1],
     bgColor: "bg-[#003322]",
     textColor: "text-white",
     btnClass: "border-[#FFB800] text-[#FFB800] hover:bg-[#FFB800] hover:text-[#003322]"
@@ -29,7 +30,7 @@ const ministries = [
   {
     title: "EVANGELISM & MISSIONS",
     description: "We support young believers to share the gospel with friends, campuses and neighbourhoods, and to carry the good news of Jesus Christ beyond borders.",
-    image: "/card/pam-mamas.jpg",
+    image: siteImages.sermonsCards[2],
     bgColor: "bg-[#3E3E4E]",
     textColor: "text-white",
     btnClass: "bg-[#FFB800] text-[#3E3E4E] hover:bg-[#FFB800]/90"
@@ -37,7 +38,7 @@ const ministries = [
   {
     title: "MARRIAGE & FAMILY",
     description: "Strong homes raise strong children. We walk with couples and parents through teaching, mentoring and honest conversation about faith in the home.",
-    image: "/card/pam-mentoring.jpg",
+    image: siteImages.sermonsCards[3],
     bgColor: "bg-[#003322]",
     textColor: "text-white",
     btnClass: "border-[#FFB800] text-[#FFB800] hover:bg-[#FFB800] hover:text-[#003322]"
@@ -45,7 +46,7 @@ const ministries = [
   {
     title: "YOUTH & STUDENTS",
     description: "From secondary school to university, we walk with young people through the pressures of study, career and identity, helping them discover God's purpose for their lives.",
-    image: "/card/pam-family.jpg",
+    image: siteImages.sermonsCards[4],
     bgColor: "bg-[#3E3E4E]",
     textColor: "text-white",
     btnClass: "bg-[#FFB800] text-[#3E3E4E] hover:bg-[#FFB800]/90"
@@ -53,7 +54,7 @@ const ministries = [
   {
     title: "COMMUNITY & SOCIAL CONCERN",
     description: "Practical love that neighbours can see. We engage positively with the needs around us, from literacy and life skills to care and support for the vulnerable.",
-    image: "/card/IMG_8950.jpg",
+    image: siteImages.sermonsCards[5],
     bgColor: "bg-[#003322]",
     textColor: "text-white",
     btnClass: "border-[#FFB800] text-[#FFB800] hover:bg-[#FFB800] hover:text-[#003322]"
@@ -61,7 +62,7 @@ const ministries = [
   {
     title: "PRAYER & PASTORAL CARE",
     description: "Every mentee needs someone in their corner. Our prayer and pastoral care team stands with young people and families through every season of life.",
-    image: "/card/IMG_8888.jpg",
+    image: siteImages.sermonsCards[6],
     bgColor: "bg-[#3E3E4E]",
     textColor: "text-white",
     btnClass: "bg-[#FFB800] text-[#3E3E4E] hover:bg-[#FFB800]/90"
@@ -77,7 +78,7 @@ export default function MinistriesPage() {
           <div 
             className="fixed inset-0 w-full h-full bg-center bg-cover -z-10 grayscale brightness-[0.4]"
             style={{
-              backgroundImage: `url(/hero/IMG_8911.jpg)`,
+              backgroundImage: `url(${siteImages.sermonsBackground})`,
             }}
           />
         </div>
